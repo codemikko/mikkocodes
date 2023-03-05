@@ -497,7 +497,7 @@
 	</section>
 </div>
 
-<h2 class="'text-lg' text-gray-400 dark:text-neutral-700 px-4 'text-lg' font-medium ">
+<h2 class="text-gray-400 dark:text-neutral-700 px-4 text-lg font-medium">
 	<div class="space-y-2 mt-32 sm:pb-0 uppercase">Latest Posts</div>
-	<Blogs class="text-neutral-300" {posts} search={false} count={3} />
+	<Blogs class="text-neutral-300" {posts} search={true} count={3} />
 </h2>

@@ -9,7 +9,7 @@
 		<a href="/" aria-label={config.headerTitle}>
 			<div class="flex items-center justify-between">
 				<div class="mr-3">
-					<img src="src/icon-white-bg.ico.ico" alt="Logo" class="h-20 w-auto" />
+					<img src="../src/logo-m.png" alt="Logo" class="h-20 w-auto" />
 				</div>
 				<div class="hidden text-4xl font-semibold sm:block font-title">
 					{config.headerTitle}

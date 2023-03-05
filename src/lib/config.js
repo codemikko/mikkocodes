@@ -10,13 +10,13 @@ export const config = {
 	domain: 'http://www.mikko.codes/',
 	siteUrl: 'https://meek-sfogliatella-07c756.netlify.app',
 	siteRepo: 'https://github.com/codemikko/mikkocodes',
-	siteLogo: 'src/icon-white-bg.ico.ico',
+	siteLogo: 'src/logo-m.png',
 	// image: '/img/avatar.png',
 	email: 'ymikko@pm.me',
 	github: 'https://github.com/codemikko',
 	twitter: 'https://twitter.com/codemikko',
 	facebook: 'https://www.facebook.com/mikkocodes',
-	youtube: 'https://www.last.fm/user/hellomikko',
+	lastfm: 'https://www.last.fm/user/hellomikko',
 	linkedin: 'https://www.linkedin.com/in/hellomikko',
 	locale: 'en-US',
 	primaryColor: '#06a261',
@@ -32,7 +32,7 @@ export const config = {
 export const user = {
 	name: 'admin',
 	// avatar value can be removed for image
-	avatar: '/blink182miikkoo.png',
+	avatar: 'src/av1.png',
 	// twitter value can be removed for no link to twitter
 	twitter: 'https://twitter.com/codemikko'
 };
@@ -67,7 +67,7 @@ export const comment = {
 		reposId: 'R_kgDOJFLSKA',
 		category: 'General',
 		categoryId: 'DIC_kwDOJFLSKM4CUp-H',
-		mapping: 'title', // supported options: pathname, url, title
+		mapping: 'url', // supported options: pathname, url, title
 		reactionsEnabled: '1', // Emoji reactions: 1 = enable / 0 = disable
 		// Send discussion metadata periodically to the parent window: 1 = enable / 0 = disable
 		metadata: '0',
@@ -76,11 +76,12 @@ export const comment = {
 		inputPosition: 'bottom',
 		// Choose the language giscus will be displayed in. options: en, es, zh-CN, zh-TW, ko, ja etc
 		lang: 'en',
-		dataStrict: '0',
+		dataStrict: '1',
 		loading: 'lazy',
+		crossorigin:'anonymous',
 		// theme example: light, dark, preferred_color_scheme, light_high_contrast, dark_high_contrast
 		// light_protanopia, dark_protanopiam, light_tritanopia, dark_tritanopia, dark_dimmed, transparent_dark
-		theme: 'light',
+		theme: 'dark',
 		// theme when dark mode
 		darkTheme: 'dark',
 		themeURL: ''
@@ -89,12 +90,12 @@ export const comment = {
 		// Visit the link below, and follow the steps in the 'configuration' section
 		// https://utteranc.es/
 		repo: 'codemikko/mikkocodes',
-		issueTerm: 'pathname', // supported options: pathname, url, title
+		issueTerm: 'title', // supported options: pathname, url, title
 		label: 'Comment 💬', // label (optional): Comment 💬
 		// theme example: github-light, github-dark, preferred-color-scheme
 		// github-dark-orange, icy-dark, dark-blue, photon-dark, boxy-light, gruvbox-dark"
-		theme: 'github-light',
+		theme: 'photon-dark',
 		// theme when dark mode
-		darkTheme: 'github-dark'
+		darkTheme: 'photon-dark'
 	}
 };
