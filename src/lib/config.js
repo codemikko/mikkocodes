@@ -1,21 +1,21 @@
 export const config = {
-	title: 'Pied Piper (un)official blog',
-	author: 'Ahmad Kiarostami',
-	headerTitle: 'Pied Piper',
-	description: 'Pied Piper (un)official blog, created with Sveltekit and Tailwind.css',
+	title: 'Mikkos Dev Blogfolio',
+	author: 'Michael Moore',
+	headerTitle: 'Mikkos Dev Blogfolio',
+	description: 'Mikkos Dev Blogfolio, created with Sveltekit and Tailwind.css 🙋🏾',
 	language: 'en-us',
 	theme: 'dark', // system, dark or light
-	domain: 'http://www.piedpiper.com/',
-	siteUrl: 'https://pied-piper-blog.netlify.app',
-	siteRepo: 'https://github.com/akiarostami/sveltekit-tailwind-blog-starter',
-	siteLogo: '/icon-512.png',
+	domain: 'http://www.mikko.codes/',
+	siteUrl: 'https://meek-sfogliatella-07c756.netlify.app',
+	siteRepo: 'https://github.com/codemikko/mikkocodes',
+	siteLogo: '/blink182miikkoo.png',
 	// image: '/img/avatar.png',
-	email: 'info@piedpiper.com',
-	github: 'https://github.com/piedpiper',
-	twitter: 'https://twitter.com/piedpiperplc',
-	facebook: 'https://www.facebook.com/piedpipersv',
-	youtube: 'https://www.youtube.com/watch?v=p3RwX06wcBs',
-	linkedin: 'https://www.linkedin.com/company/pied-piper-plc/',
+	email: 'ymikko@pm.me',
+	github: 'https://github.com/codemikko',
+	twitter: 'https://twitter.com/codemikko',
+	facebook: 'https://www.facebook.com/mikkocodes',
+	youtube: 'https://www.last.fm/user/hellomikko',
+	linkedin: 'https://www.linkedin.com/in/hellomikko',
 	locale: 'en-US',
 	primaryColor: '#06a261',
 
@@ -30,9 +30,9 @@ export const config = {
 export const user = {
 	name: 'admin',
 	// avatar value can be removed for image
-	avatar: '/logo.png',
+	avatar: '/blink182miikkoo.png',
 	// twitter value can be removed for no link to twitter
-	twitter: 'https://twitter.com/piedpiperplc'
+	twitter: 'https://twitter.com/codemikko'
 };
 
 export const navLinks = [
@@ -60,11 +60,11 @@ export const comment = {
 	giscus: {
 		// Visit the link below, and follow the steps in the 'configuration' section
 		// https://giscus.app/
-		repo: 'akiarostami/sveltekit-tailwind-blog-starter',
-		reposId: 'R_kgDOIen4kw',
-		category: 'Sample Site Comments',
-		categoryId: 'DIC_kwDOIen4k84CS9tX',
-		mapping: 'pathname', // supported options: pathname, url, title
+		repo: 'codemikko/mikkocodes',
+		reposId: 'R_kgDOJFLSKA',
+		category: 'General',
+		categoryId: 'DIC_kwDOJFLSKM4CUp-H',
+		mapping: 'title', // supported options: pathname, url, title
 		reactionsEnabled: '1', // Emoji reactions: 1 = enable / 0 = disable
 		// Send discussion metadata periodically to the parent window: 1 = enable / 0 = disable
 		metadata: '0',
@@ -85,7 +85,7 @@ export const comment = {
 	utterances: {
 		// Visit the link below, and follow the steps in the 'configuration' section
 		// https://utteranc.es/
-		repo: 'akiarostami/sveltekit-tailwind-blog-starter',
+		repo: 'codemikko/mikkocodes',
 		issueTerm: 'pathname', // supported options: pathname, url, title
 		label: 'Comment 💬', // label (optional): Comment 💬
 		// theme example: github-light, github-dark, preferred-color-scheme

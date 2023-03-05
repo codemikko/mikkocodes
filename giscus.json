@@ -1,9 +1,10 @@
 {
-	"origins": ["https://pied-piper-blog.netlify.app"],
+	"origins": ["https://meek-sfogliatella-07c756.netlify.app"],
 	"originsRegex": [
 		"http://localhost:[0-9]+",
 		"https://localhost:[0-9]+",
 		"http://127.0.0.1:[0-9]+",
-		"https://127.0.0.1:[0-9]+"
+		"https://127.0.0.1:[0-9]+",
+		"https://mikko.codes/[a-z]+"
 	]
 }
