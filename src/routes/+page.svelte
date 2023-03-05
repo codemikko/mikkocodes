@@ -4,53 +4,83 @@
 
 	export let data;
 	let posts = data.posts;
-	
 </script>
 
-<Head />
-
 <div class="space-y-2 pb-">
-	<div class="space-y-2 pb- sm:pb-32">
-		<div class="font-semibold text-xl text-neutral-700 md:text-3xl dark:text-neutral-200">
-			<h1>Self taught</h1>
-			<h1>
-				<a
-					href="https://www.w3schools.com/whatis/whatis_fullstack_js.asp?utm_source=mikko.codes"
-					target="_blank"
-					rel="noreferrer noopener"
-					class="cursor-help border-b-2 border-blue-700 text-blue-700 dark:border-neutral-500 dark:text-neutral-500"
-					>Full-stack</a
+	<div class="space-y-2 pb- sm:pb-32 py-36">
+		<div
+			class="rounded-md flex flex-col-reverse -my-20 mx-4 py-10 justify-between md:flex-row md:items-center"
+			
+		>
+			<div class="md:w-8/12" >
+				<div class="space-y-2" >
+					<div
+						class="font-semibold text-xl text-neutral-700 md:text-3xl dark:text-neutral-200"
+						
+					>
+						<h1 >Self taught</h1>
+						<h1 >
+							<a
+								href="https://www.w3schools.com/whatis/whatis_fullstack_js.asp"
+								target="_blank"
+								rel="noreferrer noopener"
+								class="cursor-help border-b-2 border-blue-700 text-blue-700 dark:border-neutral-500 dark:text-neutral-500"
+								>Full-stack</a
+							>
+							web developer
+						</h1>
+					</div>
+					<p class="text-neutral-500" >
+						Hi there, my name is Michael, you can call me Mikko. I am a self taught web developer who
+						build complex web apps using frameworks such as
+						<a
+							href="https://vuejs.org/"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="description-link"
+							>Vue.js</a
+						>,
+						<a
+							href="https://reactjs.org/"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="description-link"
+							>React.js</a
+						>
+						and
+						<a
+							href="https://tailwindcss.com/"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="description-link"
+							>Tailwind CSS</a
+						>.
+					</p>
+				</div>
+				<div
+					class="flex items-center space-x-2 rounded-md text-neutral-500 mt-4">
+					<div
+						class="h-5 w-5 rounded-full flex-shrink-0 bg-gray-500 dark:bg-gray-200" />
+					<div title="Offline" class="text-sm leading-tight truncate">Offline</div>
+				</div>
+			</div>
+			<div class="rounded-full mb-4 md:mb-0" >
+				<div
+					smart-image="true"
+					class="rounded-full h-30 w-30 md:h-50 md:w-40"
+					
+					style="background-image: url(src/av1.png); background-position: center center; background-size: cover;"
 				>
-				web developer
-			</h1>
+					<!-- svelte-ignore a11y-img-redundant-alt -->
+					<img src="src/av1.png" alt="image" loading="lazy" class="invisible" title="Mikko's Avatar" />
+					<!---->
+				</div>
+			</div>
 		</div>
-		<p class="text-neutral-300">
-			Hi there, my name is Michael, but you can call me Mikko. I am a self taught web developer. I
-			build complex web apps using frameworks such as
-			<a
-				href="https://vuejs.org/?utm_source=mikko.codes"
-				target="_blank"
-				rel="noreferrer noopener"
-				class="description-link">Vue.js</a
-			>,
-			<a
-				href="https://reactjs.org/?utm_source=mikko.codes"
-				target="_blank"
-				rel="noreferrer noopener"
-				class="description-link">React.js</a
-			>
-			and
-			<a
-				href="https://tailwindcss.com/?utm_source=mikko.codes"
-				target="_blank"
-				rel="noreferrer noopener"
-				class="description-link">Tailwind CSS</a
-			>.
-		</p>
 	</div>
 
 	<section id="technologies" class="mt-6">
-		<h3 class="text-lg text-gray-400 dark:text-neutral-700 px-4 text-lg font-medium uppercase">
+		<h3 class="text-lg text-gray-400 dark:text-neutral-700 px-4 'text-lg' font-medium uppercase">
 			Technologies I use
 		</h3>
 		<div class="flex flex-col space-y-6 mt-8">
@@ -223,6 +253,23 @@
 						</div>
 						<span class="flex-1 dark:text-neutral-500 truncate">Sass</span>
 					</div>
+					<div
+						class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
+					>
+						<div
+							class="p-2 rounded-lg flex ring-1 ring-black/5 items-center justify-center"
+							style="background-color: rgba(0, 199, 183, 0.125);"
+						>
+							<img
+								src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/svelte-icon.png"
+								alt="svelte"
+								class="fill-black/75 dark:fill-white/90"
+								width="18"
+								height="18"
+							/>
+						</div>
+						<span class="flex-1 dark:text-neutral-500 truncate">Svelte</span>
+					</div>
 				</div>
 			</section>
 			<section>
@@ -333,9 +380,6 @@
 						</div>
 						<span class="flex-1 dark:text-neutral-500 truncate">VS Code</span>
 					</div>
-					
-						
-							
 				</div>
 			</section>
 			<section>
@@ -430,15 +474,30 @@
 						</div>
 						<span class="flex-1 dark:text-neutral-500 truncate">Netlify</span>
 					</div>
+					<div
+						class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
+					>
+						<div
+							class="p-2 rounded-lg flex ring-1 ring-black/5 items-center justify-center"
+							style="background-color: rgba(0, 199, 183, 0.125);"
+						>
+							<img
+								src="https://www.svgrepo.com/show/327408/logo-vercel.svg"
+								alt="svelte"
+								class="fill-black/75 dark:fill-white/90"
+								width="18"
+								height="18"
+							/>
+						</div>
+						<span class="flex-1 dark:text-neutral-500 truncate">Vercel</span>
+					</div>
 				</div>
 			</section>
 		</div>
 	</section>
 </div>
 
-
-
-<h2 class="text-lg text-gray-400 dark:text-neutral-700 px-4 text-lg font-medium ">
+<h2 class="'text-lg' text-gray-400 dark:text-neutral-700 px-4 'text-lg' font-medium ">
 	<div class="space-y-2 mt-32 sm:pb-0 uppercase">Latest Posts</div>
-  <Blogs class="text-neutral-300" {posts} search={false} count={3} />
+	<Blogs class="text-neutral-300" {posts} search={false} count={3} />
 </h2>

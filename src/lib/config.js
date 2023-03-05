@@ -1,14 +1,16 @@
 export const config = {
-	title: 'Mikkos Dev Blogfolio',
+	// title: 'Mikkos Dev Blogfolio',
 	author: 'Michael Moore',
-	headerTitle: 'Mikkos Dev Blogfolio',
+	headerTitle: '',
+	footerTitle: ' mikko.codes',
+	footerCredit: 'Mikkos Blogfolio',
 	description: 'Mikkos Dev Blogfolio, created with Sveltekit and Tailwind.css 🙋🏾',
 	language: 'en-us',
 	theme: 'dark', // system, dark or light
 	domain: 'http://www.mikko.codes/',
 	siteUrl: 'https://meek-sfogliatella-07c756.netlify.app',
 	siteRepo: 'https://github.com/codemikko/mikkocodes',
-	siteLogo: '/blink182miikkoo.png',
+	siteLogo: 'src/icon-white-bg.ico.ico',
 	// image: '/img/avatar.png',
 	email: 'ymikko@pm.me',
 	github: 'https://github.com/codemikko',
@@ -38,7 +40,8 @@ export const user = {
 export const navLinks = [
 	{ href: '/about', title: 'About' },
 	{ href: '/projects', title: 'Projects' },
-	{ href: '/blog', title: 'Blog' }
+	{ href: '/blog', title: 'Blog' },
+	{ href: '/contact', title: 'Contact' }
 ];
 
 export const openGraph = {
