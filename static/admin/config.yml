@@ -81,11 +81,11 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: Title, name: title, widget: string }
+      - { label: Title, name: title, widget: string, required: true }
       - { label: 'Date', name: date, widget: date, default: '', format: 'YYYY-MM-DD' }
       - { label: Draft, name: draft, widget: boolean, default: false, required: false }
-      - { label: Description, name: description, widget: string, required: false }
-      - { label: 'Github Link', name: href, widget: string }
+      - { label: Description, name: description, widget: string, required: true }
+      - { label: 'Github Link', name: href, widget: string, required: true }
       - { label: 'Tools', name: 'tools', widget: 'list', allow_add: true }
       - { label: 'Resources', name: 'resources', widget: 'list', allow_add: true }
       - {
@@ -96,4 +96,4 @@ collections:
           allow_multiple: false,
           required: false
         }
-      # - { label: Body, name: 'body', widget: 'markdown', required: false }
+      - { label: Body, name: 'body', widget: 'markdown', required: false }

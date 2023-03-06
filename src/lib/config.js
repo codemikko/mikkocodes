@@ -10,7 +10,7 @@ export const config = {
 	domain: 'http://www.mikko.codes/',
 	siteUrl: 'https://meek-sfogliatella-07c756.netlify.app',
 	siteRepo: 'https://github.com/codemikko/mikkocodes',
-	siteLogo: 'src/logo-m.png',
+	siteLogo: '/src/logo-m.png',
 	// image: '/img/avatar.png',
 	email: 'ymikko@pm.me',
 	github: 'https://github.com/codemikko',
