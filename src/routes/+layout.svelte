@@ -1,5 +1,5 @@
 <script>
-	export const prerender = true;
+	export const prerender = false;
 
 	import Transition from '$lib/components/layout/Transition.svelte';
 	import Header from '$lib/components/layout/Header.svelte';
