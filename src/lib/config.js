@@ -19,7 +19,7 @@ export const config = {
 	lastfm: 'https://www.last.fm/user/hellomikko',
 	linkedin: 'https://www.linkedin.com/in/hellomikko',
 	locale: 'en-US',
-	primaryColor: '#06a261',
+	primaryColor: '#ca836c',
 
 	// supports buttondown, convertkit, emailoctopus, klaviyo, mailchimp, revue
 	// use false or null to disable newsletter

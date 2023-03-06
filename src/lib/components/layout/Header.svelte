@@ -25,7 +25,7 @@
 				>
 			{/each}
 		</div>
-		<ThemeSwitch />
+		<!-- <ThemeSwitch /> -->
 		<MobileMenu />
 	</div>
 </header>

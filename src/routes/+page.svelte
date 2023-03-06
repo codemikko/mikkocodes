@@ -30,7 +30,7 @@
 							web developer
 						</h1>
 					</div>
-					<p class="text-neutral-500" >
+					<p class="text-neutral-300" >
 						Hi there, my name is Michael, you can call me Mikko. I am a self taught web developer who
 						build complex web apps using frameworks such as
 						<a
@@ -80,13 +80,13 @@
 	</div>
 
 	<section id="technologies" class="mt-6">
-		<h3 class="text-lg text-gray-400 dark:text-neutral-700 px-4 'text-lg' font-medium uppercase">
+		<h3 class="text-lg text-gray-300 dark:text-neutral-500 px-4 font-medium uppercase">
 			Technologies I use
 		</h3>
 		<div class="flex flex-col space-y-6 mt-8">
 			<section>
 				<h5
-					class="border-b border-gray-400/10 dark:border-neutral-600/10 text-gray-400 dark:text-neutral-600/70 text-lg mx-4 mb-4 pb-2 font-medium"
+					class="border-b border-gray-400/10 dark:border-neutral-600/10 text-neutral-800 dark:text-neutral-400/70 text-lg mx-4 mb-4 pb-2 font-medium"
 				>
 					Development
 				</h5>
@@ -110,7 +110,7 @@
 								/></svg
 							>
 						</div>
-						<span class="flex-1 dark:text-neutral-500 truncate">TypeScript</span>
+						<span class="flex-1 dark:text-neutral-300 truncate">TypeScript</span>
 					</div>
 					<div
 						class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -133,7 +133,7 @@
 								/></svg
 							>
 						</div>
-						<span class="flex-1 dark:text-neutral-500 truncate">Vue.js</span>
+						<span class="flex-1 dark:text-neutral-300 truncate">Vue.js</span>
 					</div>
 					<div
 						class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -157,7 +157,7 @@
 								></svg
 							>
 						</div>
-						<span class="flex-1 dark:text-neutral-500 truncate">React.js</span>
+						<span class="flex-1 dark:text-neutral-300 truncate">React.js</span>
 					</div>
 					<div
 						class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -176,7 +176,7 @@
 								/></svg
 							>
 						</div>
-						<span class="flex-1 dark:text-neutral-500 truncate">HTML5</span>
+						<span class="flex-1 dark:text-neutral-300 truncate">HTML5</span>
 					</div>
 					<div
 						class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -210,7 +210,7 @@
 								></svg
 							>
 						</div>
-						<span class="flex-1 dark:text-neutral-500 truncate">Tailwind CSS</span>
+						<span class="flex-1 dark:text-neutral-300 truncate">Tailwind CSS</span>
 					</div>
 					<div
 						class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -232,7 +232,7 @@
 								/></svg
 							>
 						</div>
-						<span class="flex-1 dark:text-neutral-500 truncate">Node.js</span>
+						<span class="flex-1 dark:text-neutral-300 truncate">Node.js</span>
 					</div>
 					<div
 						class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -251,7 +251,7 @@
 								/></svg
 							>
 						</div>
-						<span class="flex-1 dark:text-neutral-500 truncate">Sass</span>
+						<span class="flex-1 dark:text-neutral-300 truncate">Sass</span>
 					</div>
 					<div
 						class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -268,13 +268,13 @@
 								height="18"
 							/>
 						</div>
-						<span class="flex-1 dark:text-neutral-500 truncate">Svelte</span>
+						<span class="flex-1 dark:text-neutral-300 truncate">Svelte</span>
 					</div>
 				</div>
 			</section>
 			<section>
 				<h5
-					class="border-b border-gray-400/10 dark:border-neutral-600/10 text-gray-400 dark:text-neutral-600/70 text-lg mx-4 mb-4 pb-2 font-medium"
+					class="border-b border-gray-400/10 dark:border-neutral-600/10 text-neutral-800 dark:text-neutral-600/70 text-lg mx-4 mb-4 pb-2 font-medium"
 				>
 					Apps
 				</h5>
@@ -378,13 +378,13 @@
 								></svg
 							>
 						</div>
-						<span class="flex-1 dark:text-neutral-500 truncate">VS Code</span>
+						<span class="flex-1 dark:text-neutral-300 truncate">VS Code</span>
 					</div>
 				</div>
 			</section>
 			<section>
 				<h5
-					class="border-b border-gray-400/10 dark:border-neutral-600/10 text-gray-400 dark:text-neutral-600/70 text-lg mx-4 mb-4 pb-2 font-medium"
+					class="border-b border-gray-400/10 dark:border-neutral-600/10 text-neutral-800 dark:text-neutral-600/70 text-lg mx-4 mb-4 pb-2 font-medium"
 				>
 					Services
 				</h5>
@@ -406,7 +406,7 @@
 								/></svg
 							>
 						</div>
-						<span class="flex-1 dark:text-neutral-500 truncate">GitHub</span>
+						<span class="flex-1 dark:text-neutral-300 truncate">GitHub</span>
 					</div>
 					<div
 						class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -453,7 +453,7 @@
 								/></svg
 							>
 						</div>
-						<span class="flex-1 dark:text-neutral-500 truncate">Firebase</span>
+						<span class="flex-1 dark:text-neutral-300 truncate">Firebase</span>
 					</div>
 					<div
 						class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -472,7 +472,7 @@
 								/></svg
 							>
 						</div>
-						<span class="flex-1 dark:text-neutral-500 truncate">Netlify</span>
+						<span class="flex-1 dark:text-neutral-300 truncate">Netlify</span>
 					</div>
 					<div
 						class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -489,7 +489,7 @@
 								height="18"
 							/>
 						</div>
-						<span class="flex-1 dark:text-neutral-500 truncate">Vercel</span>
+						<span class="flex-1 dark:text-neutral-300 truncate">Vercel</span>
 					</div>
 				</div>
 			</section>
@@ -497,7 +497,7 @@
 	</section>
 </div>
 
-<h2 class="text-gray-400 dark:text-neutral-700 px-4 text-lg font-medium">
+<h2 class="text-gray-800 dark:text-neutral-500 px-4 text-lg font-medium">
 	<div class="space-y-2 mt-32 sm:pb-0 uppercase">Latest Posts</div>
-	<Blogs class="text-neutral-300" {posts} search={true} count={3} />
+	<Blogs class="text-neutral-300" {posts} search={false} count={3} />
 </h2>

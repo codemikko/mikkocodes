@@ -1,29 +1,29 @@
-<!DOCTYPE html>
-<html lang="en" className="scroll-smooth" >
-	<html data-theme="night">
-		<meta charset="utf-8" />
-		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
 
-		<meta name="msapplication-TileColor" content="#000000" />
-		<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
-		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
-		<link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-		<link rel="icon" href="https://res.cloudinary.com/mikkossite/image/upload/v1678067012/logo-m_ywzhur.png" />
-		%sveltekit.head%
-		<link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" charset="UTF-8"
-			src="https://cdn.cookie-script.com/s/cfe49640362d7ec8f04625fef05f5934.js"></script>
-	</head>
-	<!-- <body class="flex flex-col h-screen"> -->
-	<body
-		class="bg-white text-black antialiased dark:bg-neutral-900 dark:text-white"
-		data-sveltekit-prefetch
-	>
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
-	<script>
-		if (localStorage.theme === 'dark') document.documentElement.classList.add('dark');
-	</script>
-	<script src="https://cdn.tailwindcss.com"></script>
+
+
+
+<!DOCTYPE html>
+<html lang="en" className="scroll-smooth">
+
+<head>
+	<meta charset="utf-8" />
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+	<meta name="msapplication-TileColor" content="#000000" />
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+	<link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
+	%sveltekit.head%
+</head>
+<!-- <body class="flex flex-col h-screen"> -->
+
+<body class="bg-white text-black antialiased dark:bg-gray-900 dark:text-white" data-sveltekit-prefetch>
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+<script>
+	if (localStorage.theme === 'dark') document.documentElement.classList.add('dark');
+</script>
+
 </html>
