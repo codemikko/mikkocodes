@@ -2,7 +2,7 @@
 	import IconMail from '$lib/icons/mail.svelte';
 	import IconGithub from '$lib/icons/github.svelte';
 	import IconFacebook from '$lib/icons/facebook.svelte';
-	import IconYoutube from '$lib/icons/youtube.svelte';
+	import IconLastFM from '$lib/icons/lastfm.svelte';
 	import IconLinkedin from '$lib/icons/linkedin.svelte';
 	import IconTwitter from '$lib/icons/twitter.svelte';
 
@@ -17,7 +17,7 @@
 		{ caption: 'mail', component: IconMail },
 		{ caption: 'github', component: IconGithub },
 		{ caption: 'facebook', component: IconFacebook },
-		{ caption: 'youtube', component: IconYoutube },
+		{ caption: 'lastfm', component: IconLastFM },
 		{ caption: 'linkedin', component: IconLinkedin },
 		{ caption: 'twitter', component: IconTwitter }
 	];
