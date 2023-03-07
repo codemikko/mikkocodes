@@ -1,11 +1,13 @@
 <script>
 	import Head from '$lib/components/layout/Head.svelte';
 	import Blogs from '$lib/components/Blogs.svelte';
-
+	import { user } from '../lib/config.js';
+	
 	export let data;
 	let posts = data.posts;
-</script>
 
+
+</script>
 <div class="space-y-2 pb-">
 	<div class="space-y-2 pb- sm:pb-32 py-36">
 		<div
@@ -72,7 +74,8 @@
 					style="background-image: url(src/av1.png); background-position: center center; background-size: cover;"
 				>
 					<!-- svelte-ignore a11y-img-redundant-alt -->
-					<img src="src/av1.png" alt="image" loading="lazy" class="invisible" title="Mikko's Avatar" />
+					
+					<img src={user.siteAvatar} alt="image" loading="lazy" class="invisible" title="Mikko's Avatar" />
 					<!---->
 				</div>
 			</div>

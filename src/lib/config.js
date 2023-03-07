@@ -4,20 +4,21 @@ export const config = {
 	headerTitle: '',
 	footerTitle: ' mikko.codes',
 	footerCredit: 'Mikkos Blogfolio',
-	description: 'Mikkos Dev Blogfolio, created with Sveltekit and Tailwind.css 🙋🏾',
+	description: 'Mikkos Dev Blogfolio, created with Sveltekit DaisyUI and Tailwind.css 🙋🏾',
 	language: 'en-us',
 	theme: 'dark', // system, dark or light
-	domain: 'http://www.mikko.codes/',
+	domain: 'http://mikko.codes/',
 	siteUrl: 'https://meek-sfogliatella-07c756.netlify.app',
 	siteRepo: 'https://github.com/codemikko/mikkocodes',
 	siteLogo: '/src/logo-m.png',
-	// image: '/img/avatar.png',
+	tailwindcss: '<script src="https://cdn.tailwindcss.com"></script>',
+	daisyui:'https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css',
 	email: 'ymikko@pm.me',
 	github: 'https://github.com/codemikko',
 	twitter: 'https://twitter.com/codemikko',
-	facebook: 'https://www.facebook.com/mikkocodes',
-	lastfm: 'https://www.last.fm/user/hellomikko',
-	linkedin: 'https://www.linkedin.com/in/hellomikko',
+	facebook: 'https://facebook.com/mikkocodes',
+	lastfm: 'https://last.fm/user/hellomikko',
+	linkedin: 'https://linkedin.com/in/hellomikko',
 	locale: 'en-US',
 	primaryColor: '#ca836c',
 
@@ -34,7 +35,8 @@ export const user = {
 	// avatar value can be removed for image
 	avatar: 'src/av1.png',
 	// twitter value can be removed for no link to twitter
-	twitter: 'https://twitter.com/codemikko'
+	twitter: 'https://twitter.com/codemikko',
+	siteAvatar: 'https://res.cloudinary.com/mikkossite/image/upload/v1678067012/av1_xqrxea.png',
 };
 
 export const navLinks = [
