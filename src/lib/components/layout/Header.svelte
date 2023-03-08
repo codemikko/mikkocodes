@@ -1,3 +1,4 @@
+
 <script>
 	import { config, navLinks } from '$lib/config';
 	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
@@ -25,7 +26,7 @@
 				>
 			{/each}
 		</div>
-		<!-- <ThemeSwitch /> -->
+		<ThemeSwitch />
 		<MobileMenu />
 	</div>
 </header>

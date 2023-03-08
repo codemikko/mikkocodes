@@ -14,7 +14,7 @@ tools:
   - HTML5
 demo:
   - https://reflinked.mikko.codes/todo-app-vercel
-image: https://camo.githubusercontent.com/03970421355e98fd96239dd8c4f9cef4fd72cc82047d282f4f45db98ba7ce2db/68747470733a2f2f692e696d6775722e636f6d2f4e4a7a793936622e706e67
+image: 'https://camo.githubusercontent.com/03970421355e98fd96239dd8c4f9cef4fd72cc82047d282f4f45db98ba7ce2db/68747470733a2f2f692e696d6775722e636f6d2f4e4a7a793936622e706e67'
 ---
 <!--StartFragment-->
 

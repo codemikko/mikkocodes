@@ -88,9 +88,9 @@ collections:
       - { label: Title, name: title, widget: string, required: true }
       - { label: 'Date', name: date, widget: date, default: '', format: 'YYYY-MM-DD' }
       - { label: Draft, name: draft, widget: boolean, default: false, required: false }
+      - { label: 'Tag', name: 'tags', widget: 'list', allow_add: true }
       - { label: Description, name: description, widget: string, required: true }
       - { label: 'Github Link', name: href, widget: string, required: true }
-      - { label: 'Tools Used', name: 'tools', widget: 'list', allow_add: true }
       - { label: 'Demo Link', name: 'demo', widget: 'list', allow_add: true }
       - {
           label: 'Featured Image',
