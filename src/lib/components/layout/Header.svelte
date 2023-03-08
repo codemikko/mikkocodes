@@ -4,7 +4,7 @@
 	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
 	import MobileMenu from '$lib/components/MobileMenu.svelte';
 </script>
-
+	<link rel="stylesheet" href="https://kit.fontawesome.com/030cb1e2a7.css" crossorigin="anonymous">
 <header class="flex items-center justify-between py-10">
 	<div>
 		<a href="/" aria-label={config.headerTitle}>

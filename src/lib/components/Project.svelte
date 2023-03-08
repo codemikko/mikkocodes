@@ -4,7 +4,6 @@
 	import Author from '$lib/components/Author.svelte';
 
 	export let post;
-	export let author;
 </script>
 
 <div class="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
@@ -56,6 +55,7 @@
 							class="flex justify-center space-x-8 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-8"
 						>
 							<li class="flex items-center space-x-2">
+							note:	<!-- svelte-ignore missing-declaration -->
 								<Author author={author.name} avatar={author.avatar} twitter={author.twitter} />
 							</li>
 						</ul>
