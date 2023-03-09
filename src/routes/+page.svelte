@@ -2,26 +2,21 @@
 	import Head from '$lib/components/layout/Head.svelte';
 	import Blogs from '$lib/components/Blogs.svelte';
 	import { user } from '../lib/config.js';
-	
+
 	export let data;
 	let posts = data.posts;
-
-
 </script>
+
 <div class="space-y-2 pb-">
 	<div class="space-y-2 pb- sm:pb-32 py-36">
 		<div
 			class="rounded-md flex flex-col-reverse -my-20 mx-4 py-10 justify-between md:flex-row md:items-center"
-			
 		>
-			<div class="md:w-8/12" >
-				<div class="space-y-2" >
-					<div
-						class="font-semibold text-xl text-neutral-700 md:text-3xl dark:text-neutral-200"
-						
-					>
-						<h1 >Self taught</h1>
-						<h1 >
+			<div class="md:w-8/12">
+				<div class="space-y-2">
+					<div class="font-semibold text-xl text-neutral-700 md:text-3xl dark:text-neutral-200">
+						<h1>Self taught</h1>
+						<h1>
 							<a
 								href="https://www.w3schools.com/whatis/whatis_fullstack_js.asp"
 								target="_blank"
@@ -32,21 +27,21 @@
 							web developer
 						</h1>
 					</div>
-					<p class="text-neutral-300" >
-						Hi there, my name is Michael, you can call me Mikko. I am a self taught web developer who
-						build complex web apps using frameworks such as
+					<p class="text-neutral-300">
+						Hi there, my name is Michael, you can call me Mikko. I am a self taught web developer
+						who build complex web apps using frameworks such as
 						<a
 							href="https://vuejs.org/"
 							target="_blank"
 							rel="noreferrer noopener"
-							class="description-link"
+							class="description-link cursor-help border-b-2 border-blue-700 text-blue-700 dark:border-neutral-500 dark:text-neutral-500"
 							>Vue.js</a
 						>,
 						<a
 							href="https://reactjs.org/"
 							target="_blank"
 							rel="noreferrer noopener"
-							class="description-link"
+							class="description-link cursor-help border-b-2 border-blue-700 text-blue-700 dark:border-neutral-500 dark:text-neutral-500"
 							>React.js</a
 						>
 						and
@@ -54,28 +49,32 @@
 							href="https://tailwindcss.com/"
 							target="_blank"
 							rel="noreferrer noopener"
-							class="description-link"
+							class="description-link cursor-help border-b-2 border-blue-700 text-blue-700 dark:border-neutral-500 dark:text-neutral-500"
 							>Tailwind CSS</a
 						>.
 					</p>
 				</div>
-				<div
-					class="flex items-center space-x-2 rounded-md text-neutral-500 mt-4">
-					<div
-						class="h-5 w-5 rounded-full flex-shrink-0 bg-gray-500 dark:bg-gray-200" />
+				<!-- todo: Work on this for realtime in details -->
+				<div class="flex items-center space-x-2 rounded-md text-neutral-500 mt-4">
+					<div class="h-5 w-5 rounded-full flex-shrink-0 bg-gray-500 dark:bg-gray-200" />
 					<div title="Offline" class="text-sm leading-tight truncate">Offline</div>
 				</div>
 			</div>
-			<div class="rounded-full mb-4 md:mb-0" >
+			<div class="rounded-full mb-4 md:mb-0">
 				<div
 					smart-image="true"
 					class="rounded-full h-30 w-30 md:h-50 md:w-40"
-					
 					style="background-image: url(src/av1.png); background-position: center center; background-size: cover;"
 				>
 					<!-- svelte-ignore a11y-img-redundant-alt -->
-					
-					<img src={user.siteAvatar} alt="image" loading="lazy" class="invisible" title="Mikko's Avatar" />
+
+					<img
+						src={user.siteAvatar}
+						alt="image"
+						loading="lazy"
+						class="invisible"
+						title="Mikko's Avatar"
+					/>
 					<!---->
 				</div>
 			</div>
