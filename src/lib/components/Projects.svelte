@@ -5,10 +5,10 @@
 	import fuzzySearch from '$utils/search.js';
 
 	export let title = '';
-	export let link_type = '';
-	// export let demo = '';
-	// export let blog = '';
-	// export let github = '';
+	export const link_type = '';
+	export const demo = '';
+	export const blog = '';
+	export const github = '';
 	export let subtitle = '';
 	export let projects = [];
 	export let tags = [];
@@ -97,29 +97,33 @@
 										{project.description}
 									</div>
 
-									{#if 'demo' in link_type && project.demo}
-										<a
-											href={project.demo}
-											class="button text-sm bg-orange-500 shadow-lg shadow-orange-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg"
-										>
-											<i class="fa-solid fa-link" /> Demo
-										</a>
-									{/if}
-									{#if 'github' in link_type && project.github}
-										<a
-											href={project.github}
-											class="button text-sm bg-blue-500 shadow-lg shadow-blue-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg"
-										>
-											<i class="fa-brands fa-github" /> GitHub
-										</a>
-									{/if}
-									{#if 'blog' in link_type && project.blog}
-										<a
-											href={project.blog}
-											class="button text-sm bg-purple-500 shadow-lg shadow-purple-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg"
-										>
-											<i class="fa-solid fa-link" /> Blog
-										</a>
+									{#if project.demo || project.github || project.blog}
+										<div class="flex items-center justify-center space-x-2">
+											{#if project.demo}
+												<a
+													href={project.demo}
+													class="button text-sm bg-orange-500 shadow-lg shadow-orange-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg"
+												>
+													<i class="fa-solid fa-link" /> Demo
+												</a>
+											{/if}
+											{#if project.demo || project.github || project.blog}
+												<a
+													href={project.github}
+													class="button text-sm bg-blue-500 shadow-lg shadow-blue-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg"
+												>
+													<i class="fa-brands fa-github" /> GitHub
+												</a>
+											{/if}
+											{#if project.demo || project.github || project.blog}
+												<a
+													href={project.blog}
+													class="button text-sm bg-purple-500 shadow-lg shadow-purple-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg"
+												>
+													<i class="fa-solid fa-link" /> Blog
+												</a>
+											{/if}
+										</div>
 									{/if}
 								</div>
 							</div>

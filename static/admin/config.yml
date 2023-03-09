@@ -90,9 +90,10 @@ collections:
       - { label: Draft, name: draft, widget: boolean, default: false, required: false }
       - { label: 'Tag', name: 'tags', widget: 'list', allow_add: true }
       - { label: Description, name: description, widget: string, required: true }
-      - { label: 'Github Link', name: href, widget: string, required: true }
-      - { label: 'Demo Link', name: 'demo', widget: 'list', allow_add: true, required: false }
-      - { label: 'Github Link', name: href, widget: string, required: true }
+      - { label: 'Github Link', name: 'github_link', widget: 'string', required: false, allow_multiple: false }
+      - { label: 'Demo Link', name: 'demo_link', widget: 'string', required: false, allow_multiple: false }
+      - { label: 'Blog Link', name: 'blog_link', widget: 'string', required: false, allow_multiple: false}
+
       - {
           label: 'Featured Image',
           name: 'image',
