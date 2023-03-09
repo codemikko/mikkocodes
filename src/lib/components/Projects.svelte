@@ -6,6 +6,9 @@
 	import fuzzySearch from '$utils/search.js';
 
 	export let title = '';
+	export let link_type = '';
+	export let demo = '';
+	export let blog ='';
 	export let subtitle = '';
 	export let projects = [];
 	export let tags = [];
@@ -91,17 +94,24 @@
 									<div class="prose max-w-none text-gray-500 dark:text-gray-400">
 										{project.description}
 									</div>
-									<ul class="flex space-x-5">
-										{#if project.demo}
-											<li>
-												<a
-													href={project.demo}
-													class="button text-sm bg-orange-500 shadow-lg shadow-orange-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg"
-													><i class="fa-solid fa-link" /> Demo</a
-												>
-											</li>
-										{/if}
-									</ul>
+
+
+									{#if link_type === 'demo'}
+											<a href={demo} class="button text-sm bg-orange-500 shadow-lg shadow-orange-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg">
+												<i class="fa-solid fa-link" /> Demo
+											</a>
+											{:else if link_type === 'github'}
+											<a href={github} class="button text-sm bg-blue-500 shadow-lg shadow-blue-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg">
+												<i class="fa-brands fa-github" /> GitHub
+											</a>
+											{:else if link_type === 'blog'}
+											<a href={blog} class="button text-sm bg-purple-500 shadow-lg shadow-purple-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg">
+												<i class="fa-solid fa-link" /> Blog
+											</a>
+									{/if}
+
+
+
 								</div>
 							</div>
 						</div>
