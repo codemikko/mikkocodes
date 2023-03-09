@@ -98,7 +98,7 @@
 									</div>
 
 									{#if project.demo || project.github || project.blog}
-										<div class="flex items-center justify-center space-x-2">
+										<div class="flex items-center space-x-2">
 											{#if project.demo}
 												<a
 													href={project.demo}
@@ -107,7 +107,7 @@
 													<i class="fa-solid fa-link" /> Demo
 												</a>
 											{/if}
-											{#if project.demo || project.github || project.blog}
+											{#if project.github}
 												<a
 													href={project.github}
 													class="button text-sm bg-blue-500 shadow-lg shadow-blue-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg"
@@ -115,7 +115,7 @@
 													<i class="fa-brands fa-github" /> GitHub
 												</a>
 											{/if}
-											{#if project.demo || project.github || project.blog}
+											{#if project.blog}
 												<a
 													href={project.blog}
 													class="button text-sm bg-purple-500 shadow-lg shadow-purple-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg"
