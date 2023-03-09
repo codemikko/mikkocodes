@@ -11,5 +11,6 @@
 		"theplatform"
 	],
 	"[markdown]": {
-	}
+	},
+	"svelte.enable-ts-plugin": true
 }
