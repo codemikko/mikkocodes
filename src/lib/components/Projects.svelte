@@ -9,6 +9,7 @@
 	export let link_type = '';
 	export let demo = '';
 	export let blog ='';
+	export let github ='';
 	export let subtitle = '';
 	export let projects = [];
 	export let tags = [];
