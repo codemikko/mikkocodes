@@ -141,13 +141,15 @@
 						{:else}
 							<div class="flex items-center space-x-2 rounded-md text-green-500 mt-4 space-y-6">
 								<div class="h-5 w-5 rounded-full flex-shrink-0 bg-green-500 -mb-5" />
-								<div title="Online" class="text-sm leading-tight truncate">Online</div>
+								<div title="Online" class="text-sm leading-tight truncate">😋nline</div>
 							</div>
 						{/if}
 					{:else}
 						<div class="flex items-center space-x-2 rounded-md text-neutral-500 mt-4 space-y-6">
-							<div class="h-5 w-5 rounded-full flex-shrink-0 bg-gray-500 dark:bg-gray-200 -mb-5" />
-							<div title="Offline" class="text-sm leading-tight truncate">Offline</div>
+							<div class="bg-gray-500 dark:bg-gray-500 -mb-5" />
+							<div title="😭ffline" class="text-sm leading-tight truncate">
+								<h2>💤 Offline ᶻ 𝗓 𐰁 👈🏾</h2>
+							</div>
 						</div>
 					{/if}
 				{/if}
