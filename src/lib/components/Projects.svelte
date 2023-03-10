@@ -97,32 +97,32 @@
 										{project.description}
 									</div>
 
-									{#if project.demo || project.github || project.blog}
+									{#if project.demo_link || project.github_link || project.blog_link}
 										<div class="flex items-center justify-center space-x-2">
-											{#if project.demo}
+											{#if project.demo_link}
 												<a
-													href={project.demo}
+													href={project.demo_link}
 													class="button text-sm bg-orange-500 shadow-lg shadow-orange-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg"
 												>
 													<i class="fa-solid fa-link" /> Demo
 												</a>
 											{/if}
-											{#if project.github}
+											{#if project.github_link}
 												<a
-													href={project.github}
+													href={project.github_link}
 													class={'button text-sm bg-blue-500 shadow-lg shadow-blue-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg' +
-														(project.demo && !project.blog ? ' ml-0' : '')}
-													style={project.demo && !project.blog ? 'margin-left: 0;' : ''}
+														(project.demo_link && !project.blog_link ? ' ml-0' : '')}
+													style={project.demo_link && !project.blog_link ? 'margin-left: 0;' : ''}
 												>
 													<i class="fa-brands fa-github" /> GitHub
 												</a>
 											{/if}
-											{#if project.blog}
+											{#if project.blog_link}
 												<a
-													href={project.blog}
+													href={project.blog_link}
 													class={'button text-sm bg-blue-500 shadow-lg shadow-blue-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg' +
-														(project.demo && !project.github ? ' ml-0' : '')}
-													style={project.demo && !project.github ? 'margin-left: 0;' : ''}
+														(project.demo_link && !project.github_link ? ' ml-0' : '')}
+													style={project.demo_link && !project.github_link ? 'margin-left: 0;' : ''}
 												>
 													<i class="fa-solid fa-link" /> Blog
 												</a>
