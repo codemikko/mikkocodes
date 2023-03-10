@@ -2,6 +2,8 @@
 draft: false
 demo:
   - https://reflinked.mikko.codes/todo-app-vercel
+github:
+  - https://github.com/ghost
 href: https://github.com/codemikko/ToVueList
 title: ToVueList
 date: 2023-02-19
