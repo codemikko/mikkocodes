@@ -13,6 +13,7 @@ description: A simple, minimalistic Todo App I designed & built! It has
   App also saves your items in local storage!
 github_link: https://github.com/codemikko/ToVueList
 demo_link: https://reflinked.mikko.codes/todo-app-vercel
+blog_link: https://loremipsum.io/
 image: https://camo.githubusercontent.com/03970421355e98fd96239dd8c4f9cef4fd72cc82047d282f4f45db98ba7ce2db/68747470733a2f2f692e696d6775722e636f6d2f4e4a7a793936622e706e67
 tools:
   - VueJs
