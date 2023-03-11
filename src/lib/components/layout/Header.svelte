@@ -31,7 +31,6 @@
 			{/each}
 		</div>
 		<ThemeSwitch />
-		<spoticon />
 		<MobileMenu />
 	</div>
 </header>

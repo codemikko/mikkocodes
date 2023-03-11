@@ -5,8 +5,8 @@
 	import { onMount } from 'svelte';
 
 	let userPresence = {};
-	const SPOTIFY_ICON = '/src/spotify.png'; // set the path to your spotify icon
-	const VSCODE_ICON = '/src/vscode.png'; // set the path to your VSCode icon
+	const SPOTIFY_ICON = '../src/spotify.png'; // set the path to your spotify icon
+	const VSCODE_ICON = '../src/vscode.png'; // set the path to your VSCode icon
 
 	async function fetchPresence() {
 		const res = await fetch('https://api.lanyard.rest/v1/users/625796542456004639');
@@ -68,7 +68,7 @@
 					<!---->
 				</div>
 				<span class="ml-0">
-					Im on<img src={statusIcon} class="w-5 h-5" alt="status icon" />
+					Im on <img src={statusIcon} class="w-5 h-5" alt="status icon" />
 				</span>
 			</div>
 		</div>
