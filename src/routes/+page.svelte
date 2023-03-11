@@ -5,8 +5,10 @@
 	import { onMount } from 'svelte';
 
 	let userPresence = {};
-	const SPOTIFY_ICON = '../src/spotify.png'; // set the path to your spotify icon
-	const VSCODE_ICON = '../src/vscode.png'; // set the path to your VSCode icon
+	const SPOTIFY_ICON =
+		'https://res.cloudinary.com/mikkossite/image/upload/v1678519665/330382_music_spotify_icon_feacoc.png'; // set the path to your spotify icon
+	const VSCODE_ICON =
+		'https://res.cloudinary.com/mikkossite/image/upload/v1678519530/vscode_hnhbrj.png'; // set the path to your VSCode icon
 
 	async function fetchPresence() {
 		const res = await fetch('https://api.lanyard.rest/v1/users/625796542456004639');
