@@ -5,21 +5,22 @@
 	import { onMount } from 'svelte';
 
 	let userPresence = {};
-	const SPOTIFY_ICON ='https://res.cloudinary.com/mikkossite/image/upload/v1678519665/330382_music_spotify_icon_feacoc.png'; // set the path to your spotify icon
-	const VSCODE_ICON ='https://i.imgur.com/ChULWgq.png'; // set the path to your VSCode icon
+	const SPOTIFY_ICON =
+		'https://res.cloudinary.com/mikkossite/image/upload/v1678519665/330382_music_spotify_icon_feacoc.png'; // set the path to your spotify icon
+	const VSCODE_ICON = 'https://i.imgur.com/ChULWgq.png'; // set the path to your VSCode icon
 
 	async function fetchPresence() {
 		const res = await fetch('https://api.lanyard.rest/v1/users/625796542456004639');
 		if (res.ok) {
 			userPresence = await res.json();
-			console.log(userPresence); // add this line for debugging
+			// console.log(userPresence); // add this line for debugging
 		}
 	}
 
 	onMount(() => {
 		fetchPresence();
-		// poll the API every 5 seconds
-		setInterval(fetchPresence, 5000);
+		// poll the API every 10 seconds
+		setInterval(fetchPresence, 10000);
 	});
 
 	export let data;
@@ -35,95 +36,109 @@
 	$: inVSCode =
 		userPresence?.data?.discord_status === 'dnd' &&
 		userPresence?.data?.discord_activities?.find(
-			(activity) => activity?.name === 'Visual Studio Code');
+			(activity) => activity?.name === 'Visual Studio Code'
+		);
 
 	// get the text to display based on whether the user is listening to Spotify or coding in VSCode
-	$: statusText = inVSCode
-		? 'Currently coding a storm'
-		: currentActivity
-		? `Listening to ${currentSong}`
-		: 'Online';
+	// $: statusText = inVSCode
+	// 	? 'Currently coding a storm'
+	// 	: currentActivity
+	// 	? `Listening to ${currentSong}`
+	// 	: 'Online';
 
 	// get the icon to display based on whether the user is listening to Spotify or coding in VSCode
 	$: statusIcon = inVSCode ? VSCODE_ICON : currentActivity ? SPOTIFY_ICON : null;
-	console.log(statusIcon);
 </script>
 
-<div class="space-y-2 pb-">
-	<div class="flex space-y-2 pb- sm:pb-32 py-36">
-		<div class="rounded-full mb-4 md:mb-0">
-			<div class="flex items-end">
-				<div
-					smart-image="true"
-					class="rounded-full h-30 w-30 md:h-50 md:w-40"
-					style="background-image: url({user.siteAvatar}); background-position: center center; background-size: cover;"
-				>
-					<img
-						src={user.siteAvatar}
-						alt="avatar"
-						loading="lazy"
-						class="invisible"
-						title="Mikko's Avatar"
-					/>
-					<!---->
+{#if userPresence.data}
+	<div class="space-y-2 pb-">
+		<div class="flex space-y-2 pb- sm:pb-32 py-36">
+			<div class="rounded-full mb-4 md:mb-0">
+				<div class="flex">
+					<div
+						smart-image="true"
+						class="rounded-full md:h-50 md:w-40 relative"
+						style="background-image: url({user.siteAvatar}); background-position: center center; background-size: cover;"
+					>
+						<img
+							src={user.siteAvatar}
+							alt="avatar"
+							loading="lazy"
+							class="invisible"
+							title="Mikko's Avatar"
+						/>
+						<div class="absolute left-0 bottom-0 -my-14 ml-10">
+							{#if currentActivity}
+								<img
+									src={VSCODE_ICON}
+									class="w-5 h-5 mr-2 inline"
+									alt="VSCode icon"
+									title="Currently coding a storm"
+								/>
+							{/if}
+							{#if currentActivity}
+								<img
+									src={SPOTIFY_ICON}
+									class="w-5 h-5 inline"
+									alt="Spotify icon"
+									title="Listening to {userPresence.data.spotify.artist}"
+								/>
+							{/if}
+						</div>
+					</div>
 				</div>
-				<span class="ml-0">
-					Im on <img src={statusIcon} class="w-5 h-5" alt="statusIcon" />
-				</span>
 			</div>
-		</div>
 
-		<div
-			class="rounded-md flex flex-col-reverse -my-20 mx-4 py-10 justify-between md:flex-row md:items-center md:w-8/12"
-		>
-			<div class="space-y-2">
-				<div class="font-semibold text-xl text-neutral-700 md:text-3xl dark:text-neutral-200">
-					<h1>Self taught</h1>
-					<h1>
+			<div
+				class="rounded-md flex flex-col-reverse -my-20 mx-4 py-10 justify-between md:flex-row md:items-center md:w-8/12"
+			>
+				<div class="space-y-10 mx-16">
+					<div class="font-semibold text-xl text-neutral-700 md:text-3xl dark:text-neutral-200">
+						<h1>Self taught</h1>
+						<h1>
+							<a
+								href="https://www.w3schools.com/whatis/whatis_fullstack_js.asp"
+								target="_blank"
+								rel="noreferrer noopener"
+								class="cursor-help description-link text-blue-700 dark:text-neutral-500"
+								>Full-stack</a
+							>
+							web developer
+						</h1>
+					</div>
+					<p class="text-neutral-300">
+						Hi there, my name is Michael, you can call me Mikko. I am a self taught web developer
+						who builds complex web apps using frameworks such as
 						<a
-							href="https://www.w3schools.com/whatis/whatis_fullstack_js.asp"
+							href="https://vuejs.org/"
 							target="_blank"
 							rel="noreferrer noopener"
-							class="cursor-help description-link text-blue-700 dark:text-neutral-500">Full-stack</a
+							class="description-link text-green-600 dark:text-neutral-500"
+							style="border-bottom: 2px solid #4fc08d;">Vue.js</a
+						>,
+						<a
+							href="https://reactjs.org/"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="description-link text-blue-700 dark:text-neutral-500"
+							style="border-bottom: 2px solid #61dafb;">React.js</a
 						>
-						web developer
-					</h1>
-				</div>
-				<p class="text-neutral-300">
-					Hi there, my name is Michael, you can call me Mikko. I am a self taught web developer who
-					builds complex web apps using frameworks such as
-					<a
-						href="https://vuejs.org/"
-						target="_blank"
-						rel="noreferrer noopener"
-						class="description-link text-green-600 dark:text-neutral-500"
-						style="border-bottom: 2px solid #4fc08d;">Vue.js</a
-					>,
-					<a
-						href="https://reactjs.org/"
-						target="_blank"
-						rel="noreferrer noopener"
-						class="description-link text-blue-700 dark:text-neutral-500"
-						style="border-bottom: 2px solid #61dafb;">React.js</a
-					>
 
-					and
-					<a
-						href="https://tailwindcss.com/"
-						target="_blank"
-						rel="noreferrer noopener"
-						class="description-link text-blue-700 dark:text-neutral-500"
-						style="border-bottom: 2px solid #2196f3;">Tailwind CSS</a
-					>.
-				</p>
+						and
+						<a
+							href="https://tailwindcss.com/"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="description-link text-blue-700 dark:text-neutral-500"
+							style="border-bottom: 2px solid #2196f3;">Tailwind CSS</a
+						>.
+					</p>
 
-				<!-- todo: Work on this for realtime in details -->
-				{#if userPresence.data}
-					{#if userPresence.data.active_on_discord_desktop || userPresence.data.active_on_discord_mobile || userPresence.data.clientID === 'f1c5806b-7bba-4e66-ae58-2f26c7ad6cee'}
+					{#if userPresence.data.active_on_discord_desktop || userPresence.data.active_on_discord_mobile}
 						{#if userPresence.data.listening_to_spotify}
 							{@html decodeURI(userPresence.data.spotify.track_url)}
-							<div class="flex items-center space-x-2 rounded-md text-white mt-4 space-y-6">
-								<p class="text-sm font-bold text-gray-500 block -mb-6">Listening too:</p>
+							<div class="flex items-center space-x-2.5 rounded-md text-white mt-4 absolute">
+								<p class="text-sm font-bold text-gray-500 block -mb-6" />
 								<br />
 								<img
 									src={userPresence.data.spotify.album_art_url}
@@ -157,11 +172,11 @@
 							</div>
 						</div>
 					{/if}
-				{/if}
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+{/if}
 
 <section id="technologies" class="mt-6">
 	<h3 class="text-lg text-gray-300 dark:text-neutral-500 px-4 font-medium uppercase">
