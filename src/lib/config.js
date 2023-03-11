@@ -78,7 +78,7 @@ export const comment = {
 		inputPosition: 'bottom',
 		// Choose the language giscus will be displayed in. options: en, es, zh-CN, zh-TW, ko, ja etc
 		lang: 'en',
-		dataStrict: '1',
+		dataStrict: '0',
 		loading: 'lazy',
 		crossorigin:'anonymous',
 		// theme example: light, dark, preferred_color_scheme, light_high_contrast, dark_high_contrast

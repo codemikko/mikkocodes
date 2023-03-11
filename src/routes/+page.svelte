@@ -55,7 +55,7 @@
 			<div
 				smart-image="true"
 				class="rounded-full h-30 w-30 md:h-50 md:w-40"
-				style="background-image: url(/src/av1.png); background-position: center center; background-size: cover;"
+				style="background-image: url({user.siteAvatar}); background-position: center center; background-size: cover;"
 			>
 				<img
 					src={user.siteAvatar}
