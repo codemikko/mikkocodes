@@ -5,10 +5,8 @@
 	import { onMount } from 'svelte';
 
 	let userPresence = {};
-	const SPOTIFY_ICON =
-		'https://res.cloudinary.com/mikkossite/image/upload/v1678519665/330382_music_spotify_icon_feacoc.png'; // set the path to your spotify icon
-	const VSCODE_ICON =
-		'https://res.cloudinary.com/mikkossite/image/upload/v1678519530/vscode_hnhbrj.png'; // set the path to your VSCode icon
+	const SPOTIFY_ICON ='https://res.cloudinary.com/mikkossite/image/upload/v1678519665/330382_music_spotify_icon_feacoc.png'; // set the path to your spotify icon
+	const VSCODE_ICON ='https://i.imgur.com/ChULWgq.png'; // set the path to your VSCode icon
 
 	async function fetchPresence() {
 		const res = await fetch('https://api.lanyard.rest/v1/users/625796542456004639');
@@ -37,8 +35,7 @@
 	$: inVSCode =
 		userPresence?.data?.discord_status === 'dnd' &&
 		userPresence?.data?.discord_activities?.find(
-			(activity) => activity?.name === 'Visual Studio Code'
-		);
+			(activity) => activity?.name === 'Visual Studio Code');
 
 	// get the text to display based on whether the user is listening to Spotify or coding in VSCode
 	$: statusText = inVSCode
@@ -49,6 +46,7 @@
 
 	// get the icon to display based on whether the user is listening to Spotify or coding in VSCode
 	$: statusIcon = inVSCode ? VSCODE_ICON : currentActivity ? SPOTIFY_ICON : null;
+	console.log(statusIcon);
 </script>
 
 <div class="space-y-2 pb-">
@@ -70,7 +68,7 @@
 					<!---->
 				</div>
 				<span class="ml-0">
-					Im on <img src={statusIcon} class="w-5 h-5" alt="status icon" />
+					Im on <img src={statusIcon} class="w-5 h-5" alt="statusIcon" />
 				</span>
 			</div>
 		</div>
@@ -148,13 +146,13 @@
 						{:else}
 							<div class="flex items-center space-x-2 rounded-md text-green-500 mt-4 space-y-6">
 								<div class="h-5 w-5 rounded-full flex-shrink-0 bg-green-500 -mb-5" />
-								<div title="Online" class="text-sm leading-tight truncate">😋nline</div>
+								<div title="Online" class="text-sm leading-tight truncate">Online</div>
 							</div>
 						{/if}
 					{:else}
 						<div class="flex items-center space-x-2 rounded-md text-neutral-500 mt-4 space-y-6">
 							<div class="bg-gray-500 dark:bg-gray-500 -mb-5" />
-							<div title="😭ffline" class="text-sm leading-tight truncate">
+							<div title="Offline" class="text-sm leading-tight truncate">
 								<h2>💤 Offline ᶻ 𝗓 𐰁 👈🏾</h2>
 							</div>
 						</div>
