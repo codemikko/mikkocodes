@@ -21,6 +21,7 @@ export const config = {
 	linkedin: 'https://linkedin.com/in/hellomikko',
 	locale: 'en-US',
 	primaryColor: '#ca836c',
+	spoticon: '/src/spotify.png',
 
 	// supports buttondown, convertkit, emailoctopus, klaviyo, mailchimp, revue
 	// use false or null to disable newsletter

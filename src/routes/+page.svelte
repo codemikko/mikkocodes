@@ -52,19 +52,24 @@
 <div class="space-y-2 pb-">
 	<div class="flex space-y-2 pb- sm:pb-32 py-36">
 		<div class="rounded-full mb-4 md:mb-0">
-			<div
-				smart-image="true"
-				class="rounded-full h-30 w-30 md:h-50 md:w-40"
-				style="background-image: url({user.siteAvatar}); background-position: center center; background-size: cover;"
-			>
-				<img
-					src={user.siteAvatar}
-					alt="avatar"
-					loading="lazy"
-					class="invisible"
-					title="Mikko's Avatar"
-				/>
-				<!---->
+			<div class="flex items-end">
+				<div
+					smart-image="true"
+					class="rounded-full h-30 w-30 md:h-50 md:w-40"
+					style="background-image: url({user.siteAvatar}); background-position: center center; background-size: cover;"
+				>
+					<img
+						src={user.siteAvatar}
+						alt="avatar"
+						loading="lazy"
+						class="invisible"
+						title="Mikko's Avatar"
+					/>
+					<!---->
+				</div>
+				<span class="ml-0">
+					Im on<img src={statusIcon} class="w-5 h-5" alt="status icon" />
+				</span>
 			</div>
 		</div>
 

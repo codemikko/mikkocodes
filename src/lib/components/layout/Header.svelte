@@ -1,16 +1,20 @@
-
 <script>
 	import { config, navLinks } from '$lib/config';
 	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
 	import MobileMenu from '$lib/components/MobileMenu.svelte';
 </script>
-	<link rel="stylesheet" href="https://kit.fontawesome.com/030cb1e2a7.css" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://kit.fontawesome.com/030cb1e2a7.css" crossorigin="anonymous" />
 <header class="flex items-center justify-between py-10">
 	<div>
 		<a href="/" aria-label={config.headerTitle}>
 			<div class="flex items-center justify-between">
 				<div class="mr-3">
-					<img src="https://res.cloudinary.com/mikkossite/image/upload/v1678067012/icon-white-bg.ico_ov6os6.ico" alt="Logo" class="h-20 w-auto" />
+					<img
+						src="https://res.cloudinary.com/mikkossite/image/upload/v1678067012/icon-white-bg.ico_ov6os6.ico"
+						alt="Logo"
+						class="h-20 w-auto"
+					/>
 				</div>
 				<div class="hidden text-4xl font-semibold sm:block font-title">
 					{config.headerTitle}
@@ -27,6 +31,7 @@
 			{/each}
 		</div>
 		<ThemeSwitch />
+		<spoticon />
 		<MobileMenu />
 	</div>
 </header>
