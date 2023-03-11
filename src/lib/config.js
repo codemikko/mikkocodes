@@ -1,8 +1,8 @@
 export const config = {
-	// title: 'Mikkos Dev Blogfolio',
+	title: 'Mikkos Dev Blogfolio',
 	author: 'Michael Moore',
 	headerTitle: '',
-	footerTitle: ' mikko.codes',
+	footerTitle: 'mikko.codes',
 	footerCredit: 'Mikkos Blogfolio',
 	description: 'Mikkos Dev Blogfolio, created with Sveltekit DaisyUI and Tailwind.css 🙋🏾',
 	language: 'en-us',
@@ -21,7 +21,6 @@ export const config = {
 	linkedin: 'https://linkedin.com/in/hellomikko',
 	locale: 'en-US',
 	primaryColor: '#ca836c',
-	spoticon: '/src/spotify.png',
 
 	// supports buttondown, convertkit, emailoctopus, klaviyo, mailchimp, revue
 	// use false or null to disable newsletter
@@ -70,13 +69,13 @@ export const comment = {
 		reposId: 'R_kgDOJFLSKA',
 		category: 'General',
 		categoryId: 'DIC_kwDOJFLSKM4CUp-H',
-		mapping: 'url', // supported options: pathname, url, title
+		mapping: 'pathname', // supported options: pathname, url, title
 		reactionsEnabled: '1', // Emoji reactions: 1 = enable / 0 = disable
 		// Send discussion metadata periodically to the parent window: 1 = enable / 0 = disable
 		metadata: '0',
 		// theme example: light, dark, dark_dimmed, dark_high_contrast
 		// Place the comment box above the comments. options: bottom, top
-		inputPosition: 'bottom',
+		inputPosition: 'top',
 		// Choose the language giscus will be displayed in. options: en, es, zh-CN, zh-TW, ko, ja etc
 		lang: 'en',
 		dataStrict: '0',
@@ -84,7 +83,7 @@ export const comment = {
 		crossorigin:'anonymous',
 		// theme example: light, dark, preferred_color_scheme, light_high_contrast, dark_high_contrast
 		// light_protanopia, dark_protanopiam, light_tritanopia, dark_tritanopia, dark_dimmed, transparent_dark
-		theme: 'dark',
+		theme: 'preferred_color_scheme',
 		// theme when dark mode
 		darkTheme: 'dark',
 		themeURL: ''
