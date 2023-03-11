@@ -52,7 +52,7 @@
 
 {#if userPresence.data}
 	<div class="space-y-2 pb-">
-		<div class="flex space-y-2 pb- sm:pb-32 py-36">
+		<div class="flex space-y-0 pb- sm:pb-32 py-36 pl-32">
 			<div class="rounded-full mb-4 md:mb-0">
 				<div class="flex">
 					<div
