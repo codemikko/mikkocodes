@@ -102,7 +102,7 @@
 											{#if project.demo_link}
 												<a
 													href={project.demo_link}
-													class="button text-sm bg-orange-500 shadow-lg shadow-orange-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg"
+													class="button text-sm bg-orange-500 shadow-lg shadow-orange-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-md mx-5"
 												>
 													<i class="fa-solid fa-link" /> Demo
 												</a>
@@ -110,7 +110,7 @@
 											{#if project.github_link}
 												<a
 													href={project.github_link}
-													class={'button text-sm bg-blue-500 shadow-lg shadow-blue-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg' +
+													class={'button text-sm bg-blue-500 shadow-lg shadow-blue-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-md mx-5' +
 														(project.demo_link && !project.blog_link ? ' ml-0' : '')}
 													style={project.demo_link && !project.blog_link ? 'margin-left: 0;' : ''}
 												>
@@ -120,11 +120,11 @@
 											{#if project.blog_link}
 												<a
 													href={project.blog_link}
-													class={'button text-sm bg-blue-500 shadow-lg shadow-blue-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-lg' +
+													class={'button text-sm bg-blue-500 shadow-lg shadow-blue-500/50 pb-1 pt-1 pr-4 pl-4 accent-current/0 rounded-md mx-5' +
 														(project.demo_link && !project.github_link ? ' ml-0' : '')}
 													style={project.demo_link && !project.github_link ? 'margin-left: 0;' : ''}
 												>
-													<i class="fa-solid fa-link" /> Blog
+													<i class="fa-solid fa-blog" /> Blog
 												</a>
 											{/if}
 										</div>
