@@ -11,6 +11,9 @@ summary: Using the power and versatility of Tailwind CSS, this project features
   used to create beautiful and responsive designs.
 tags:
   - tailwind
+  - codepen
+  - grid
+  - demo
 image: https://i.imgur.com/ZKWqXRS.png
 author: Mikko
 ---
