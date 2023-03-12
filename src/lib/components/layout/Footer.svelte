@@ -24,4 +24,5 @@
 			&nbsp; • &nbsp; <a href="/rss.xml">RSS Feed</a>
 		</div>
 	</div>
+	<script src="https://kit.fontawesome.com/030cb1e2a7.js" crossorigin="anonymous"></script>
 </footer>
