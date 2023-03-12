@@ -38,7 +38,7 @@
 
 			My vision is to establish myself as a respected frontend consultant based on my passion and expertise, and to build a portfolio of successful projects and clients across the world. I aim to be a smart, self-motivated, and driven individual doing what I love.
 			<div class="relative">
-  <a href="https://codepen.io/MikkoCodes" target="_blank" rel="noopener noreferrer" class="absolute -bottom-16 left-96 inline-block py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50" style="text-decoration:none; color:white;">Some of My Doodles</a>
+  <a href="https://reflinked.mikko.codes/github" target="_blank" rel="noopener noreferrer" class="absolute -bottom-16 left-96 inline-block py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50" style="text-decoration:none; color:white;">Some of My Doodles</a>
 </div>
 
 		</div>
