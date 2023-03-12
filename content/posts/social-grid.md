@@ -14,8 +14,6 @@ tags:
 image: https://i.imgur.com/ZKWqXRS.png
 author: Mikko
 ---
-
-
 ## Lets Begin:
 
 The "CSS Grid Layout Showcase" on CodePen is an impressive demonstration of the power and versatility of Tailwind CSS. The project features a beautiful and modern design with a responsive grid layout composed of boxes containing images and text.
@@ -45,21 +43,7 @@ The "box" class sets the background color of the element to gray (#1a202c) using
 
 Overall, this project is a great example of how Tailwind CSS can be used to create beautiful and responsive designs using inline classes. The code is clean and easy to understand, and the use of inline classes allows for quick and efficient styling without the need for external CSS files.
 
-Y﻿ou can see an actual full demo here:
-
-<!--StartFragment-->
-
-<iframe height="300" style="width: 100%;" scrolling="no" title="Social Grid" src="https://codepen.io/MikkoCodes/embed/JjapjZp?default-tab=html%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-
-  See the Pen <a href="https://codepen.io/MikkoCodes/pen/JjapjZp">
-
-  Social Grid</a> by Michael (<a href="https://codepen.io/MikkoCodes">@MikkoCodes</a>)
-
-  on <a href="https://codepen.io">CodePen</a>.
-
-</iframe>
-
-<!--EndFragment-->
+Y﻿ou can see an actual full demos here:
 
 * My [Website](https://mikko.codes/contact)
 * a﻿nd [Eggsy's Website](https://eggsy.xyz/me/contact/)
