@@ -1,6 +1,6 @@
 ---
 title: Social Grid
-subtitle: Credit to <a href="https://github.com/eggsy">Eggsy</a>
+subtitle: "Credit to "
 date: 2023-03-12
 draft: true
 summary: See how you can make yourself a social grid which is similar to having
