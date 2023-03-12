@@ -39,3 +39,8 @@
     transition: background-color 600000s 0s, color 600000s 0s;
   }
 }
+
+/* Contact Form */
+.gradient--image {    
+  background-image: linear-gradient(rgba(5, 0, 32, 0.697), rgba(5, 0, 32, 0.697)), url('https://cdn.pixabay.com/photo/2017/09/06/13/29/colorful-2721468_960_720.jpg');
+}
