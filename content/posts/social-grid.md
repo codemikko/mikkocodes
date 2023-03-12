@@ -1,6 +1,6 @@
 ---
 title: Social Grid
-subtitle: "Credit to "
+subtitle: ""
 date: 2023-03-12
 draft: true
 summary: See how you can make yourself a social grid which is similar to having
@@ -28,7 +28,7 @@ Similarly, the box elements are styled using inline classes to achieve the desir
 
 ```html
 <div class="box relative overflow-hidden bg-gray-900 rounded-lg shadow-lg">
-  <img src="https://source.unsplash.com/featured/800x600/?nature" alt="nature" class="object-cover w-full h-full">
+  <img src="https://source.unsplash.com/featured/800x600/?nature" alt="nature" class="object-cover w-full h-full" />
   <div class="overlay absolute top-0 left-0 w-full h-full flex items-center justify-center">
     <p class="text-white text-lg font-bold">Nature</p>
   </div>
@@ -42,20 +42,14 @@ Overall, this project is a great example of how Tailwind CSS can be used to crea
 
 
 
-Y﻿ou can see an actual full demo here:\
+Y﻿ou can see an actual full demo here:
 <!--StartFragment-->
 
-<p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="JjapjZp" data-user="MikkoCodes" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-
-  <span>See the Pen <a href="https://codepen.io/MikkoCodes/pen/JjapjZp">
-
-  Social Grid</a> by Michael (<a href="https://codepen.io/MikkoCodes">@MikkoCodes</a>)
-
-  on <a href="https://codepen.io">CodePen</a>.</span>
-
-</p>
-
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<iframe height="300" style="width: 100%;" scrolling="no" title="Social Grid" src="https://codepen.io/MikkoCodes/embed/JjapjZp?default-tab=html%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/MikkoCodes/pen/JjapjZp">
+  Social Grid</a> by Michael (<a href="https://codepen.io/MikkoCodes">@MikkoCodes</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 
 <!--EndFragment-->
 
