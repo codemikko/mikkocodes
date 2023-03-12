@@ -3,11 +3,13 @@
 	"compilerOptions": {
 		"allowJs": true,
 		"checkJs": false,
+		"ignoreDeprecations": "5.0",
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
+		"jsx": "preserve",
 		"strict": false,
 		"baseUrl": ".",
 		"paths": {
