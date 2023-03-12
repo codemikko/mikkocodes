@@ -9,38 +9,55 @@ tags: []
 image: https://i.imgur.com/ZKWqXRS.png
 author: Mikko
 ---
-S﻿o I had fun doing this project on Codepen, my playground. If you check out my Contact page,  you will see how the social links were turned into cards. which were then also put into a grid. I knew I didnt need no more than a 2 column grid, making it with a **ZERO** gap.\
-\
-Starting off, we are going to make the grid columns which is exactly what is needed for our social card links:
+## Lets Begin:
 
-`<div class="grid grid-cols-2 gap-0">`
+The "CSS Grid Layout Showcase" on CodePen is an impressive demonstration of the power and versatility of Tailwind CSS. The project features a beautiful and modern design with a responsive grid layout composed of boxes containing images and text.
 
-H﻿owever your header is, thats totally fine, you would just add that underneath to start off. If your just doing this as a complete blank and testing it, then I would suggest you doing it on Codepen but see how I have it on mine. below:
+One of the standout features of this project is the use of inline classes to apply styles to HTML elements. Tailwind CSS provides a wide range of utility classes that can be used to quickly and easily style elements without the need for external CSS files. For example, the following lines of code apply various classes to the container element:
+
+```html
+<div class="flex flex-wrap justify-center lg:justify-start">
+  ...
+</div>
+```
+
+
+The "flex" class sets the display property of the element to "flex", enabling flexible layout options. The "flex-wrap" class sets the flex-wrap property to "wrap", allowing the elements to wrap to the next line if there is not enough space. The "justify-center" class centers the elements horizontally within the container. The "lg:justify-start" class applies the "justify-start" class on large screens (screens with a width of 1024px or more), aligning the elements to the left.
+
+Similarly, the box elements are styled using inline classes to achieve the desired layout and design. The following lines of code apply classes to the box elements:
+
+```html
+<div class="box relative overflow-hidden bg-gray-900 rounded-lg shadow-lg">
+  <img src="https://source.unsplash.com/featured/800x600/?nature" alt="nature" class="object-cover w-full h-full">
+  <div class="overlay absolute top-0 left-0 w-full h-full flex items-center justify-center">
+    <p class="text-white text-lg font-bold">Nature</p>
+  </div>
+</div>
+```
+
+
+The "box" class sets the background color of the element to gray (#1a202c) using the "bg-gray-900" class, and applies a rounded border using the "rounded-lg" class. The "shadow-lg" class adds a shadow effect to the box element. The "object-cover" class scales the image to cover the entire box element, and the "w-full" and "h-full" classes set the width and height of the image to 100% of the box element. The "overlay" class is positioned absolutely over the image using the "absolute" class, and centered within the box element using the "flex" and "items-center" and "justify-center" classes. The "text-white", "text-lg", and "font-bold" classes style the text within the overlay.
+
+Overall, this project is a great example of how Tailwind CSS can be used to create beautiful and responsive designs using inline classes. The code is clean and easy to understand, and the use of inline classes allows for quick and efficient styling without the need for external CSS files.
+
+
+
+Y﻿ou can see an actual full demo here:\
+<!--StartFragment-->
 
 <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="JjapjZp" data-user="MikkoCodes" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/MikkoCodes/pen/JjapjZp">
-  Social Grid</a> by Michael (<a href="https://codepen.io/MikkoCodes">@MikkoCodes</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
+
+  <span>See the Pen <a href="https://codepen.io/MikkoCodes/pen/JjapjZp">
+
+  Social Grid</a> by Michael (<a href="https://codepen.io/MikkoCodes">@MikkoCodes</a>)
+
+  on <a href="https://codepen.io">CodePen</a>.</span>
+
 </p>
+
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
+<!--EndFragment-->
 
-
-
-
-
-
-
-
-H﻿ow about we just go ahead and use one to start off right? No half assin' here!
-
-\`\``<body class="bg-gray-900 text-gray-500 dark:text-neutral-600 container mx-auto min-h-screen pb-8 w-11/12 sm:pb-10 sm:w-9/12 md:w-7/12">
-
-  <div class="space-y-2 pt-8 pb-16 md:space-y-5">
-    <h2 class="text-white text-3xl">Contact Me</h2>
-    <p>If you have any questions, feel free to contact me.</p>
-  </div>\`\``
-
-N﻿ow we can go ahead and start adding the grid and columns for our project:
-
-`﻿<div class="grid grid-cols-2 gap-0">`
+* My [Website](https://mikko.codes/contact)
+* a﻿nd [Eggsy's Website](https://eggsy.xyz/me/contact/)
