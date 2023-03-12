@@ -2,7 +2,6 @@
 	import { config } from '$lib/config';
 	import SocialIcon from '$lib/components/SocialIcon.svelte';
 	import Newsletter from '$lib/components/Newsletter.svelte';
-
 	let year = new Date().getFullYear();
 </script>
 
@@ -12,7 +11,7 @@
 			<SocialIcon icon="mail" url={config.email ? `mailto:${config.email}` : ''} />
 			<SocialIcon icon="github" url={config.github} />
 			<SocialIcon icon="facebook" url={config.facebook} />
-			<SocialIcon icon="lastfm" url={config.lastfm} />
+			<SocialIcon icon="youtube" url={config.youtube} />
 			<SocialIcon icon="linkedin" url={config.linkedin} />
 			<SocialIcon icon="twitter" url={config.twitter} />
 		</div>
@@ -20,8 +19,8 @@
 			<Newsletter />
 		{/if}
 		<div class="mb-4 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-			<a href="/">{config.footerCredit}</a> &nbsp; © {year}
-			&nbsp; • &nbsp; <a href="/rss.xml">RSS Feed</a>
+			<a href="/">{config.title}</a> &nbsp; • &nbsp; © {year}
+			{config.author} &nbsp; • &nbsp; <a href="/rss.xml">RSS Feed</a>
 		</div>
 	</div>
 	<script src="https://kit.fontawesome.com/030cb1e2a7.js" crossorigin="anonymous"></script>

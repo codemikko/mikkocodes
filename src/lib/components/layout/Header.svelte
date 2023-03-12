@@ -30,6 +30,7 @@
 			{/each}
 		</div>
 		<ThemeSwitch />
+
 		<MobileMenu />
 	</div>
 </header>

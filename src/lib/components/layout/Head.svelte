@@ -16,7 +16,15 @@
 	<title>{title} | {config.title}</title>
 	<meta name="description" content={description} />
 	<meta name="author" content={author} />
-	<link rel="stylesheet" href="https://kit.fontawesome.com/030cb1e2a7.css" crossorigin="anonymous" />
+	<link
+		rel="stylesheet"
+		href="https://kit.fontawesome.com/030cb1e2a7.css"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css"
+	/>
 
 	<!-- Facebook Meta Tags -->
 	<meta property="og:url" content={url} />

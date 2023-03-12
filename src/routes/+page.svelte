@@ -1,6 +1,7 @@
 <script>
 	import Head from '$lib/components/layout/Head.svelte';
 	import Blogs from '$lib/components/Blogs.svelte';
+	import Projects from '$lib/components/Projects.svelte';
 	import { user } from '../lib/config.js';
 	import { onMount } from 'svelte';
 
@@ -13,7 +14,6 @@
 		const res = await fetch('https://api.lanyard.rest/v1/users/625796542456004639');
 		if (res.ok) {
 			userPresence = await res.json();
-			// console.log(userPresence); // add this line for debugging
 		}
 	}
 
@@ -48,8 +48,40 @@
 
 	// get the icon to display based on whether the user is listening to Spotify or coding in VSCode
 	$: statusIcon = inVSCode ? VSCODE_ICON : currentActivity ? SPOTIFY_ICON : null;
+
+	onMount(() => {
+		const search = document.querySelector('#search');
+		if (search) {
+			// Initialize Algolia search script
+			// Make sure to replace YOUR_APP_ID and YOUR_SEARCH_KEY with your own values
+			const searchClient = algoliasearch('YOUR_APP_ID', 'YOUR_SEARCH_KEY');
+			const searchBox = searchBox({
+				container: search,
+				placeholder: 'Search for posts...',
+				autofocus: true
+			});
+			searchBox.addWidget(
+				instantsearch.widgets.hits({
+					container: '#hits',
+					templates: {
+						item: `
+              <div>
+                <a href="{{permalink}}">
+                  <h4>{{{_highlightResult.title.value}}}</h4>
+                </a>
+                <p>{{{_snippetResult.content.value}}}</p>
+              </div>
+            `
+					}
+				})
+			);
+			searchBox.start();
+		}
+	});
 </script>
 
+<div id="search" />
+<div id="hits" />
 {#if userPresence.data}
 	<div class="space-y-2 pb-">
 		<div class="flex space-y-0 pb- sm:pb-32 py-36 pl-32">
@@ -209,7 +241,7 @@
 							/></svg
 						>
 					</div>
-					<span class="flex-1 dark:text-neutral-300 truncate">TypeScript</span>
+					<span class="flex-1 text-slate-900 dark:text-white truncate">TypeScript</span>
 				</div>
 				<div
 					class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -232,7 +264,7 @@
 							/></svg
 						>
 					</div>
-					<span class="flex-1 dark:text-neutral-300 truncate">Vue.js</span>
+					<span class="flex-1 text-slate-900 dark:text-white truncate">Vue.js</span>
 				</div>
 				<div
 					class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -256,7 +288,7 @@
 							></svg
 						>
 					</div>
-					<span class="flex-1 dark:text-neutral-300 truncate">React.js</span>
+					<span class="flex-1 text-slate-900 dark:text-white truncate">React.js</span>
 				</div>
 				<div
 					class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -275,7 +307,7 @@
 							/></svg
 						>
 					</div>
-					<span class="flex-1 dark:text-neutral-300 truncate">HTML5</span>
+					<span class="flex-1 text-slate-900 dark:text-white truncate">HTML5</span>
 				</div>
 				<div
 					class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -309,7 +341,7 @@
 							></svg
 						>
 					</div>
-					<span class="flex-1 dark:text-neutral-300 truncate">Tailwind CSS</span>
+					<span class="flex-1 text-slate-900 dark:text-white truncate">Tailwind CSS</span>
 				</div>
 				<div
 					class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -331,7 +363,7 @@
 							/></svg
 						>
 					</div>
-					<span class="flex-1 dark:text-neutral-300 truncate">Node.js</span>
+					<span class="flex-1 text-slate-900 dark:text-white truncate">Node.js</span>
 				</div>
 				<div
 					class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -350,7 +382,7 @@
 							/></svg
 						>
 					</div>
-					<span class="flex-1 dark:text-neutral-300 truncate">Sass</span>
+					<span class="flex-1 text-slate-900 dark:text-white truncate">Sass</span>
 				</div>
 				<div
 					class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -367,7 +399,7 @@
 							height="18"
 						/>
 					</div>
-					<span class="flex-1 dark:text-neutral-300 truncate">Svelte</span>
+					<span class="flex-1 text-slate-900 dark:text-white truncate">Svelte</span>
 				</div>
 			</div>
 		</section>
@@ -471,7 +503,7 @@
 							></svg
 						>
 					</div>
-					<span class="flex-1 dark:text-neutral-300 truncate">VS Code</span>
+					<span class="flex-1 text-slate-900 dark:text-white truncate">VS Code</span>
 				</div>
 			</div>
 		</section>
@@ -499,7 +531,7 @@
 							/></svg
 						>
 					</div>
-					<span class="flex-1 dark:text-neutral-300 truncate">GitHub</span>
+					<span class="flex-1 text-slate-900 dark:text-white truncate">GitHub</span>
 				</div>
 				<div
 					class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -546,7 +578,7 @@
 							/></svg
 						>
 					</div>
-					<span class="flex-1 dark:text-neutral-300 truncate">Firebase</span>
+					<span class="flex-1 text-slate-900 dark:text-white truncate">Firebase</span>
 				</div>
 				<div
 					class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -565,7 +597,7 @@
 							/></svg
 						>
 					</div>
-					<span class="flex-1 dark:text-neutral-300 truncate">Netlify</span>
+					<span class="flex-1 text-slate-900 dark:text-white truncate">Netlify</span>
 				</div>
 				<div
 					class="dark:bg-neutral-600/10 bg-gray-100 hover:bg-gray-200/50 text-black/50 rounded-md cursor-pointer select-none transition-colors p-3 flex items-center space-x-2 overflow-hidden dark:hover:bg-neutral-600/15 text-white"
@@ -582,7 +614,7 @@
 							height="18"
 						/>
 					</div>
-					<span class="flex-1 dark:text-neutral-300 truncate">Vercel</span>
+					<span class="flex-1 text-slate-900 dark:text-white truncate">Vercel</span>
 				</div>
 			</div>
 		</section>
@@ -591,5 +623,10 @@
 
 <h2 class="text-gray-800 dark:text-neutral-500 px-4 text-lg font-medium">
 	<div class="space-y-2 mt-32 sm:pb-0 uppercase">Latest Posts</div>
-	<Blogs class="text-neutral-300" {posts} search={false} count={3} />
+	<Blogs class="text-neutral-300" {posts} search={true} count={3} />
 </h2>
+
+<!-- <h2 class="text-gray-800 dark:text-neutral-500 px-4 text-lg font-medium">
+	<div class="space-y-2 mt-32 sm:pb-0 uppercase">Latest Projects</div>
+	<Projects class="text-neutral-300" {projects} search={true} count={3} />
+</h2> -->
