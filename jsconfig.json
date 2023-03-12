@@ -18,7 +18,7 @@
 			"$lib": ["./src/lib"],
 			"$lib/*": ["./src/lib/*"],
 			"$utils": ["./src/utils"],
-			"$utils/*": ["./src/utils/*"]
+			"$utils/*": ["./src/utils/*"],
 		}
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.svelte", "src/**/*.js"]
