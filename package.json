@@ -49,6 +49,7 @@
 	"type": "module",
 	"dependencies": {
 		"@cloudinary/url-gen": "^1.9.1",
+		"@netlify/plugin-lighthouse": "^4.0.7",
 		"@resvg/resvg-js": "^2.4.1",
 		"discord.js": "^14.7.1",
 		"js-yaml": "^4.1.0",
