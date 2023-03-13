@@ -14,6 +14,8 @@
 		const res = await fetch('https://api.lanyard.rest/v1/users/625796542456004639');
 		if (res.ok) {
 			userPresence = await res.json();
+			console.log('userPresence:', userPresence);
+			console.log('vsCodeSession:', vsCodeSession);
 		}
 	}
 
@@ -51,15 +53,15 @@
 	);
 
 	// get the name and ID of the current file being edited
-	$: fileName = vsCodeSession?.details.split(' - ')[0];
+	$: fileName = vsCodeSession?.details?.split(' - ')[0];
 	$: fileId = vsCodeSession?.id;
 
 	// get the line number being edited
-	$: lineNum = vsCodeSession?.state?.split(':')[2];
+	$: lineNum = vsCodeSession?.state?.split(':')[2] ?? '';
 
 	// construct the status message to display
 	$: statusMessage =
-		isOnline && inVSCode
+		isOnline && inVSCode && fileName && lineNum
 			? `Editing ${fileName} on line ${lineNum}`
 			: isOnline && currentActivity
 			? `Listening to ${currentSong}`
@@ -82,25 +84,14 @@
 						class="invisible"
 						title="Mikko's Avatar"
 					/>
-					{#if userPresence.data}
-						<div class="absolute left-0 bottom-0 -my-14 ml-10">
-							{#if currentActivity}
-								<img
-									src={VSCODE_ICON}
-									class="w-5 h-5 mr-2 inline"
-									alt="VSCode icon"
-									title="Currently coding a storm"
-								/>
-							{/if}
-							{#if currentActivity}
-								<img
-									src={SPOTIFY_ICON}
-									class="w-5 h-5 inline"
-									alt="Spotify icon"
-									title="Listening to {userPresence.data.spotify.artist}"
-								/>
-							{/if}
-						</div>
+
+					{#if currentActivity}
+						<img
+							src={SPOTIFY_ICON}
+							class="w-5 h-5 inline"
+							alt="Spotify icon"
+							title="Listening to {userPresence.data.spotify.artist}"
+						/>
 					{/if}
 				</div>
 			</div>
@@ -150,14 +141,20 @@
 					>.
 				</p>
 				{#if userPresence.data}
-					<div class="absolute left-0 bottom-0 -my-14 ml-10">
-						{#if currentActivity}
-							<img
-								src={VSCODE_ICON}
+					<div class="relative -left-2.5 bottom-5 -my-14 ml-10">
+						{#if inVSCode}
+							Im on: <img
+								src={statusIcon}
 								class="w-5 h-5 mr-2 inline"
 								alt="VSCode icon"
 								title="Currently coding a storm"
 							/>
+							and currently working on: {vsCodeSession?.name === 'Visual Studio Code'} on line {lineNum}
+						{:else if currentActivity}
+							Listening to {currentSong} by {userPresence.data.spotify.artist} from {userPresence
+								.data.spotify.album}
+						{:else}
+							<!-- Offline -->
 						{/if}
 					</div>
 				{/if}
