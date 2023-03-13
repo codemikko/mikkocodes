@@ -94,10 +94,3 @@
 		{:else}Playing an Ad ...{/if}
 	{:else}...{/if}
 </div>
-
-{#if userPresence.data && userPresence.data.active_on_discord_desktop}
-	{#if (userPresence.data.application_id = '782685898163617802')}
-		<div class="flex items-center space-x-2.5 rounded-md text-white mt-4 absolute">
-			<p class="text-sm font-bold text-gray-500 block -mb-6" />
-			screem
-		</div>{/if}{/if}

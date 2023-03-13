@@ -39,34 +39,50 @@
 			(activity) => activity?.name === 'Visual Studio Code'
 		);
 
-	// get the text to display based on whether the user is listening to Spotify or coding in VSCode
-	// $: statusText = inVSCode
-	// 	? 'Currently coding a storm'
-	// 	: currentActivity
-	// 	? `Listening to ${currentSong}`
-	// 	: 'Online';
-
 	// get the icon to display based on whether the user is listening to Spotify or coding in VSCode
 	$: statusIcon = inVSCode ? VSCODE_ICON : currentActivity ? SPOTIFY_ICON : null;
+
+	// check if the user is online
+	$: isOnline = userPresence?.data?.active_on_discord_desktop;
+
+	// get the details of the user's current VSCode session
+	$: vsCodeSession = userPresence?.data?.discord_activities?.find(
+		(activity) => activity?.name === 'Visual Studio Code'
+	);
+
+	// get the name and ID of the current file being edited
+	$: fileName = vsCodeSession?.details.split(' - ')[0];
+	$: fileId = vsCodeSession?.id;
+
+	// get the line number being edited
+	$: lineNum = vsCodeSession?.state?.split(':')[2];
+
+	// construct the status message to display
+	$: statusMessage =
+		isOnline && inVSCode
+			? `Editing ${fileName} on line ${lineNum}`
+			: isOnline && currentActivity
+			? `Listening to ${currentSong}`
+			: 'Offline';
 </script>
 
-{#if userPresence.data}
-	<div class="space-y-2 pb-">
-		<div class="flex space-y-0 pb- sm:pb-32 py-36 pl-32">
-			<div class="rounded-full mb-4 md:mb-0">
-				<div class="flex">
-					<div
-						smart-image="true"
-						class="rounded-full md:h-50 md:w-40 relative"
-						style="background-image: url({user.siteAvatar}); background-position: center center; background-size: cover;"
-					>
-						<img
-							src={user.siteAvatar}
-							alt="avatar"
-							loading="lazy"
-							class="invisible"
-							title="Mikko's Avatar"
-						/>
+<div class="space-y-2 pb-">
+	<div class="flex space-y-0 pb- sm:pb-32 py-36 pl-32">
+		<div class="rounded-full mb-4 md:mb-0">
+			<div class="flex">
+				<div
+					smart-image="true"
+					class="rounded-full md:h-50 md:w-40 relative"
+					style="background-image: url({user.siteAvatar}); background-position: center center; background-size: cover;"
+				>
+					<img
+						src={user.siteAvatar}
+						alt="avatar"
+						loading="lazy"
+						class="invisible"
+						title="Mikko's Avatar"
+					/>
+					{#if userPresence.data}
 						<div class="absolute left-0 bottom-0 -my-14 ml-10">
 							{#if currentActivity}
 								<img
@@ -85,59 +101,70 @@
 								/>
 							{/if}
 						</div>
-					</div>
-				</div>
-			</div>
-
-			<div
-				class="rounded-md flex flex-col-reverse -my-20 mx-4 py-10 justify-between md:flex-row md:items-center md:w-8/12"
-			>
-				<div class="space-y-10 mx-16">
-					<div class="font-semibold text-xl text-neutral-700 md:text-3xl dark:text-neutral-200">
-						<h1>Self taught</h1>
-						<h1>
-							<a
-								href="https://www.w3schools.com/whatis/whatis_fullstack_js.asp"
-								target="_blank"
-								rel="noreferrer noopener"
-								class="cursor-help description-link text-blue-700 dark:text-neutral-500"
-								>Full-stack</a
-							>
-							web developer
-						</h1>
-					</div>
-					<p class="text-neutral-300">
-						Hi there, my name is Michael, you can call me Mikko. I am a self taught web developer
-						who builds complex web apps using frameworks such as
-						<a
-							href="https://vuejs.org/"
-							target="_blank"
-							rel="noreferrer noopener"
-							class="description-link text-green-600 dark:text-neutral-500"
-							style="border-bottom: 2px solid #4fc08d;">Vue.js</a
-						>,
-						<a
-							href="https://reactjs.org/"
-							target="_blank"
-							rel="noreferrer noopener"
-							class="description-link text-blue-700 dark:text-neutral-500"
-							style="border-bottom: 2px solid #61dafb;">React.js</a
-						>
-
-						and
-						<a
-							href="https://tailwindcss.com/"
-							target="_blank"
-							rel="noreferrer noopener"
-							class="description-link text-blue-700 dark:text-neutral-500"
-							style="border-bottom: 2px solid #2196f3;">Tailwind CSS</a
-						>.
-					</p>
+					{/if}
 				</div>
 			</div>
 		</div>
+
+		<div
+			class="rounded-md flex flex-col-reverse -my-20 mx-4 py-10 justify-between md:flex-row md:items-center md:w-8/12"
+		>
+			<div class="space-y-10 mx-16">
+				<div class="font-semibold text-xl text-neutral-700 md:text-3xl dark:text-neutral-200">
+					<h1>Self taught</h1>
+					<h1>
+						<a
+							href="https://www.w3schools.com/whatis/whatis_fullstack_js.asp"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="cursor-help description-link text-blue-700 dark:text-neutral-500">Full-stack</a
+						>
+						web developer
+					</h1>
+				</div>
+				<p class="text-neutral-300">
+					Hi there, my name is Michael, you can call me Mikko. I am a self taught web developer who
+					builds complex web apps using frameworks such as
+					<a
+						href="https://vuejs.org/"
+						target="_blank"
+						rel="noreferrer noopener"
+						class="description-link text-green-600 dark:text-neutral-500"
+						style="border-bottom: 2px solid #4fc08d;">Vue.js</a
+					>,
+					<a
+						href="https://reactjs.org/"
+						target="_blank"
+						rel="noreferrer noopener"
+						class="description-link text-blue-700 dark:text-neutral-500"
+						style="border-bottom: 2px solid #61dafb;">React.js</a
+					>
+
+					and
+					<a
+						href="https://tailwindcss.com/"
+						target="_blank"
+						rel="noreferrer noopener"
+						class="description-link text-blue-700 dark:text-neutral-500"
+						style="border-bottom: 2px solid #2196f3;">Tailwind CSS</a
+					>.
+				</p>
+				{#if userPresence.data}
+					<div class="absolute left-0 bottom-0 -my-14 ml-10">
+						{#if currentActivity}
+							<img
+								src={VSCODE_ICON}
+								class="w-5 h-5 mr-2 inline"
+								alt="VSCode icon"
+								title="Currently coding a storm"
+							/>
+						{/if}
+					</div>
+				{/if}
+			</div>
+		</div>
 	</div>
-{/if}
+</div>
 
 <section id="technologies" class="mt-6">
 	<h3 class="text-lg text-gray-300 dark:text-neutral-500 px-4 font-medium uppercase">
