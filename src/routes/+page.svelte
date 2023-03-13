@@ -133,45 +133,6 @@
 							style="border-bottom: 2px solid #2196f3;">Tailwind CSS</a
 						>.
 					</p>
-
-					{#if userPresence.data.active_on_discord_desktop || userPresence.data.active_on_discord_mobile}
-						{#if userPresence.data.listening_to_spotify}
-							{@html decodeURI(userPresence.data.spotify.track_url)}
-							<div class="flex items-center space-x-2.5 rounded-md text-white mt-4 absolute">
-								<p class="text-sm font-bold text-gray-500 block -mb-6" />
-								<br />
-								<img
-									src={userPresence.data.spotify.album_art_url}
-									alt="Album art"
-									class="h-14 w-14 rounded-full flex-shrink-0 -mb-5"
-								/>
-
-								<div class="text-sm leading-tight">
-									<a
-										href="https://open.spotify.com/track/{userPresence.data.spotify.track_id}"
-										target="_blank"
-										rel="noreferrer"
-									>
-										<span class="block text-green-500">{userPresence.data.spotify.song}</span>
-										<span class="block text-xs">{userPresence.data.spotify.artist}</span>
-									</a>
-									<p class="text-xs">{userPresence.data.spotify.album}</p>
-								</div>
-							</div>
-						{:else}
-							<div class="flex items-center space-x-2 rounded-md text-green-500 mt-4 space-y-6">
-								<div class="h-5 w-5 rounded-full flex-shrink-0 bg-green-500 -mb-5" />
-								<div title="Online" class="text-sm leading-tight truncate">Online</div>
-							</div>
-						{/if}
-					{:else}
-						<div class="flex items-center space-x-2 rounded-md text-neutral-500 mt-4 space-y-6">
-							<div class="bg-gray-500 dark:bg-gray-500 -mb-5" />
-							<div title="Offline" class="text-sm leading-tight truncate">
-								<h2>💤 Offline ᶻ 𝗓 𐰁 👈🏾</h2>
-							</div>
-						</div>
-					{/if}
 				</div>
 			</div>
 		</div>
