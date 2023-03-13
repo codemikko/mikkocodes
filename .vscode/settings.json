@@ -13,5 +13,6 @@
 	"[markdown]": {
 	},
 	"svelte.enable-ts-plugin": true,
-	"vscord.enabled": false
+	"vscord.enabled": false,
+	"discord.enabled": true
 }
