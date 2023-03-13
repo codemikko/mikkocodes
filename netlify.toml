@@ -4,3 +4,13 @@ publish = "build"
 
 [functions]
 directory = "functions"
+
+[[plugins]]
+package = "@algolia/netlify-plugin-crawler"
+
+[plugins.inputs]
+branches = ['master', 'develop', 'feat/add-algolia']
+disabled = false
+pathPrefix = "/blog"
+customDomain = "mikko.codes"
+renderJavaScript = true

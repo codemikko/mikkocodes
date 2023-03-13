@@ -4,6 +4,7 @@
 	import Projects from '$lib/components/Projects.svelte';
 	import { user } from '../lib/config.js';
 	import { onMount } from 'svelte';
+	import algoliasearch from 'algoliasearch';
 
 	let userPresence = {};
 	const SPOTIFY_ICON =
@@ -22,6 +23,10 @@
 		// poll the API every 10 seconds
 		setInterval(fetchPresence, 10000);
 	});
+
+	const appId = import.meta.env.VITE_ALGOLIA_APP_ID;
+	const searchKey = import.meta.env.VITE_ALGOLIA_SEARCH_KEY;
+	let searchEverFocused = false;
 
 	export let data;
 	let posts = data.posts;
@@ -48,40 +53,8 @@
 
 	// get the icon to display based on whether the user is listening to Spotify or coding in VSCode
 	$: statusIcon = inVSCode ? VSCODE_ICON : currentActivity ? SPOTIFY_ICON : null;
-
-	onMount(() => {
-		const search = document.querySelector('#search');
-		if (search) {
-			// Initialize Algolia search script
-			// Make sure to replace YOUR_APP_ID and YOUR_SEARCH_KEY with your own values
-			const searchClient = algoliasearch('YOUR_APP_ID', 'YOUR_SEARCH_KEY');
-			const searchBox = searchBox({
-				container: search,
-				placeholder: 'Search for posts...',
-				autofocus: true
-			});
-			searchBox.addWidget(
-				instantsearch.widgets.hits({
-					container: '#hits',
-					templates: {
-						item: `
-              <div>
-                <a href="{{permalink}}">
-                  <h4>{{{_highlightResult.title.value}}}</h4>
-                </a>
-                <p>{{{_snippetResult.content.value}}}</p>
-              </div>
-            `
-					}
-				})
-			);
-			searchBox.start();
-		}
-	});
 </script>
 
-<div id="search" />
-<div id="hits" />
 {#if userPresence.data}
 	<div class="space-y-2 pb-">
 		<div class="flex space-y-0 pb- sm:pb-32 py-36 pl-32">
@@ -624,6 +597,7 @@
 <h2 class="text-gray-800 dark:text-neutral-500 px-4 text-lg font-medium">
 	<div class="space-y-2 mt-32 sm:pb-0 uppercase">Latest Posts</div>
 	<Blogs class="text-neutral-300" {posts} search={true} count={3} />
+	<div id="search" />
 </h2>
 
 <!-- <h2 class="text-gray-800 dark:text-neutral-500 px-4 text-lg font-medium">
