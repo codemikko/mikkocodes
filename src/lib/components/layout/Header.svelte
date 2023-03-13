@@ -91,6 +91,10 @@
 					<p class="text-xs">{userPresence.data.spotify.album}</p>
 				</div>
 			</div>
-		{:else}Playing an Ad ...{/if}
-	{:else}...{/if}
+		{:else}
+			<!-- Playing an Ad ... -->
+		{/if}
+	{:else}
+		<!-- ... -->
+	{/if}
 </div>
