@@ -4,7 +4,6 @@
 	import Projects from '$lib/components/Projects.svelte';
 	import { user } from '../lib/config.js';
 	import { onMount } from 'svelte';
-	import algoliasearch from 'algoliasearch';
 
 	let userPresence = {};
 	const SPOTIFY_ICON =
@@ -23,10 +22,6 @@
 		// poll the API every 10 seconds
 		setInterval(fetchPresence, 10000);
 	});
-
-	const appId = import.meta.env.VITE_ALGOLIA_APP_ID;
-	const searchKey = import.meta.env.VITE_ALGOLIA_SEARCH_KEY;
-	let searchEverFocused = false;
 
 	export let data;
 	let posts = data.posts;
@@ -597,7 +592,6 @@
 <h2 class="text-gray-800 dark:text-neutral-500 px-4 text-lg font-medium">
 	<div class="space-y-2 mt-32 sm:pb-0 uppercase">Latest Posts</div>
 	<Blogs class="text-neutral-300" {posts} search={true} count={3} />
-	<div id="search" />
 </h2>
 
 <!-- <h2 class="text-gray-800 dark:text-neutral-500 px-4 text-lg font-medium">
